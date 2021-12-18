@@ -1,0 +1,601 @@
+@charset "UTF-8";
+
+html {
+    height:100%;
+}
+body {
+    height:100%;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*=============================================
+  タイトルのバー
+  =============================================*/
+.clickerw-title{
+    width: auto;
+    height: 16px;
+    font-size: 16px;
+    background-color: #333333;
+    color: white;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+
+    user-select: none;
+    
+    cursor: pointer;
+}
+
+.clickerw-title-version:hover{
+    text-decoration:underline;
+    text-decoration-color:#FFFFFF;
+}
+
+/*=============================================
+  ゲーム
+  =============================================*/
+.clickerw-gamebody{
+    display: flex;
+}
+
+/*=============================================
+  しろくまをクリックするスペース
+  =============================================*/
+
+.clickerw-clickSpace{
+    height: calc(100% - 24px);
+    height: -webkit-calc(100% - 24px);
+    
+    width: 340px;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 0px;
+
+    background-image: url(../../image/hokkyoku.webp);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+    user-select: none;
+}
+
+
+
+.clickSpace-pictureSirokuma{
+    width: 85%;
+
+	object-fit: cover;
+	border-radius:50%;
+
+    margin-top: 10%;
+    user-select: none;
+
+}
+
+.clickSpace-pictureSirokuma:active{
+    width: 82%;
+
+	object-fit:cover;
+	border-radius:50%;
+
+    margin-top: 12%;
+    margin-bottom: 1%;
+}
+
+.clickSpace-HyoujiSirokuma{
+    margin-top: 10%;
+    color: black;
+    font-size: 30%;
+}
+
+.clickSpace-SirokumaHyouji{
+    margin-top: 3%;
+    text-shadow: 1px 0 5px #FFF;
+}
+
+/*=============================================
+  真ん中のスペース
+  =============================================*/
+
+.clickerw-centerSpace{
+    height: calc(100% - 24px);
+    height: -webkit-calc(100% - 24px);
+    
+    width: calc(100% - 340px - 340px);
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 340px;
+}
+
+
+
+.centerSpace-headMenu{
+    height: 15%;
+
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    box-sizing: border-box;
+}
+
+.headmenu-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "button1 button-text button-text button3"
+      "button2 button-text button-text button4";
+    width: 100%;
+    height: 100%;
+
+    user-select: none;
+  }
+  
+.button1 {
+    grid-area: button1;
+}
+  
+.button2 {
+    grid-area: button2;
+}
+  
+.button-text {
+    grid-area: button-text;
+}
+  
+.button3 {
+    grid-area: button3;
+}
+  
+.button4 {
+    grid-area: button4;
+}
+
+.clickerw-container-style{
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    box-sizing: border-box;
+
+    font-size: 2vh;
+    position: relative;
+    background-color:SaddleBrown;
+    color: white;
+    box-shadow: inset 0 10px 25px 0 rgba(0, 0, 0, .5);
+
+    background: linear-gradient(#0D0 0%, #008100 50%, #005B00 51%, #003900 100%);
+    border: solid 1px #003900;
+    box-shadow: 0 1px 2px #606060, 0 0 2px #FFF inset;
+    text-shadow: 3px 0 3px #003900, 0 3px 3px #003900, -3px 0 3px #003900, 0 -3px 3px #003900;
+}
+
+.clickerw-container-style:hover{
+    opacity: .8;
+}
+
+.clickerw-container-style-textarea{
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    box-sizing: border-box;
+
+    font-size: 2vh;
+    position: relative;
+    background-color: green;
+    color: white;
+    box-shadow: inset 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+.container-text_transform{
+    position: absolute;
+    top: 50%; /*親要素を起点に上から50%*/
+    left: 50%;  /*親要素を起点に左から50%*/
+    transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+}
+
+.clickerw-centerContents{
+    width: 100%;
+    height: calc(100% - 24px - 15%);
+    
+}
+
+.centerContents-title{
+    font-size: xx-large;
+    padding: 5px 0 5px 5px;
+    color: white;
+    text-align: center;
+
+    width: auto;
+    padding-top: 6px;
+
+}
+
+.contents_text{
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+}
+
+.centerContents-titletext{
+    
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.centerContents-center{
+    background: #333333;
+    color: white;
+
+    height: calc(100% + 25px);
+
+    box-shadow: inset 0 10px 50px 0 rgb(0 0 0 / 50%);
+    background: url(../../image/center-contents-texture.webp);
+    background-repeat: repeat;
+
+    overflow-y: scroll;
+
+}
+
+.centerContents-head2{
+    padding-left: 5px;
+    padding-right: 90px;
+    font-size: 18pt;
+}
+.centerContents-head3{
+    padding-left: 30px;
+    padding-right: 90px;
+    font-size: 15pt;
+}
+
+.centerContents-contents{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+/*=============================================
+  右側スペース（アップグレード）
+  =============================================*/
+.clickerw-upgradeSpace{
+    height: calc(100% - 24px);
+    height: -webkit-calc(100% - 24px);
+    
+    width: 340px;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    box-sizing: border-box;
+
+    position: absolute;
+    right: 0px;
+    
+}
+.upgradeSpace-Skill{
+    width: 100%;
+    height: 204px;
+
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    box-sizing: border-box;
+
+    position: relative;
+
+    overflow-y: scroll;
+    
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.upgradeSpace-Skill::-webkit-scrollbar {
+    display: none;
+}
+.skill-buliding-title{
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    box-sizing: border-box;
+
+    padding-left: 2px;
+    padding-bottom: 2px;
+
+    background: url(../../image/buliding-title.webp);
+    color: white;
+
+    height: 24px;
+}
+
+.kakeruButton{
+    font-size: x-small;
+}
+
+.skillContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid1 grid2 grid3 grid4 grid5"
+      "grid6 grid7 grid8 grid9 grid10"
+      "grid11 grid12 grid13 grid14 grid15";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+.grid1 { grid-area: grid1; }
+
+.grid2 { grid-area: grid2; }
+
+.grid3 { grid-area: grid3; }
+
+.grid4 { grid-area: grid4; }
+
+.grid5 { grid-area: grid5; }
+
+.grid6 { grid-area: grid6; }
+
+.grid7 { grid-area: grid7; }
+
+.grid8 { grid-area: grid8; }
+
+.grid9 { grid-area: grid9; }
+
+.grid10 { grid-area: grid10; }
+
+.grid11 { grid-area: grid11; }
+
+.grid12 { grid-area: grid12; }
+
+.grid-style{
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    box-sizing: border-box;
+    border-top-width: 0px;
+    border-left-width: 0px;
+
+    background: url(../../image/upgrade-texture.webp);
+
+    position: relative;
+}
+
+.grid-style:hover{
+    opacity: .8;
+}
+
+.upgrade-icon{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+
+    font-size: 55px;
+}
+
+
+/*=============================================
+  各スキル選択画面
+  =============================================*/
+.pointer-skill{
+    visibility: visible;
+}
+
+.sharp-pen-skill{
+    visibility: hidden;
+}
+
+.sitajiki-skill{
+    visibility: hidden;
+}
+
+.house-skill{
+    visibility: hidden;
+}
+
+.computer-skill{
+    visibility: hidden;
+}
+
+.turiba-skill{
+    visibility: hidden;
+}
+
+.bank-skill{
+    visibility: hidden;
+}
+
+.snow-skill{
+    visibility: hidden;
+}
+
+.kujira-skill{
+    visibility: hidden;
+}
+
+.factory-skill{
+    visibility: hidden;
+}
+
+.threed-skill{
+    visibility: hidden;
+}
+
+.gpu-skill{
+    visibility: hidden;
+}
+
+.atom-skill{
+    visibility: hidden;
+}
+
+.time-skill{
+    visibility: hidden;
+}
+
+.js-skill{
+    visibility: hidden;
+}
+
+.ract-skill{
+    visibility: hidden;
+}
+
+
+/*=============================================
+  建物
+  =============================================*/
+
+.upgradeSpace-buliding{
+    width: 100%;
+    height: calc(100% - 202px - 50px);
+
+    overflow-y: scroll;
+}
+
+.upgradeSpace-buliding-button{
+    width: 100%;
+    height: 65px;
+
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    box-sizing: border-box;
+    border-bottom-width: 0px;
+    position: relative;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    background: url(../../image/texture.webp);
+}
+
+.upgradeSpace-buliding-button:hover{
+    opacity: .8;
+}
+
+
+.bulid-button-left{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) ;
+    -webkit-transform: translateY(-50%);
+    display: flex;
+    
+}
+
+.bulid-button-name{
+    font-size: x-large;
+    margin-top: 4px;
+}
+
+.bulid-button-suu{
+    font-size: small;
+}
+
+.bulid-button-havekazu{
+    font-size: large;
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%) ;
+    -webkit-transform: translateY(-50%);
+    text-align: left;
+}
+/*=============================================
+  アイテムの解説
+  =============================================*/
+
+.itemdesc{
+    width: 420px;
+    height: 220px;
+
+    border: 1px solid black;
+    
+    visibility: hidden;
+
+    background: black;
+
+    position: absolute;
+    top: 40px;
+    right: 350px;
+}
+
+.itemdesc-upper{
+    width: auto;
+    height: 77px;
+
+    border: 1px solid black;
+    display: flex;
+    background-color: cornsilk;
+    }
+
+.itemdesc-picture{
+    width: 77px;
+    height: 77px;
+
+    position: relative;
+
+    background: url(../../image/upgrade-texture.webp);
+}
+
+.itemdesc-back-item{
+    background: url(../../image/texture.webp);
+}
+
+.itemdesc-upper-text{
+    font-size: x-large;
+    margin-top: 12px;
+    margin-left: 10px;
+
+}
+
+.itemdesc-kaisetu-text{
+    height: 100px;
+    border: 1px solid black;
+    
+    padding-top: 10px;
+    padding-left: 10px;
+
+    background-color: white;
+}
+
+.itemdesc-bottom-text{
+    margin-top: 6px;
+    color: #0D0;    
+}
+
+.itemdata{
+    width: 420px;
+    height: 220px;
+
+    border: 1px solid black;
+    
+    visibility: hidden;
+
+    background: black;
+
+    position: absolute;
+    top: 280px;
+    right: 350px;
+}
