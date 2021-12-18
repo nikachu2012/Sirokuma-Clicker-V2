@@ -75,10 +75,10 @@ function dataSave(){
 
     localStorage.setItem('sirokumaOneClick', sirokumaOneClick)
 
-    // console.log(localStorage)
+    return('データをLocalStorageに保存しました。')
 
     // localStorage.setItem('sirokumaSuu', sirokumaSuu)
-    return('LocalStorageにセーブしました')
+
 }
 
 function dataLoad(){
@@ -292,7 +292,8 @@ function dataLoad(){
         document.getElementById('skill1kakutokuDesc').innerHTML = "獲得済み";
     }
     //　sirokumaSuu = localStorage.getItem('sirokumaSuu')
-    return('LocalStorageからロードしました。')
+
+    return('データをLocalStorageから読みだしました。')
 }
 
 function dataRemove(){
@@ -303,8 +304,4 @@ function dataRemove(){
 
 setInterval(() => {
     dataSave();
-}, 60000);
-
-function clickerSave(){
-    dataSave();
-}
+}, 10000);
