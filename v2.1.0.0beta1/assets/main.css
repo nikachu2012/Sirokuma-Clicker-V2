@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.clickerw-title{
+    width: auto;
+    height: auto;
+    background-color: #333333;
+    color: white;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+}
+
+.clickerw-title-version:hover{
+    text-decoration:underline;
+    text-decoration-color:#FFFFFF;
+}

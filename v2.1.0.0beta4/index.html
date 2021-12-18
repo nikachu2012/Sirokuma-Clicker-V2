@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しろくまクリッカー</title>
+
+    <link rel="stylesheet" href="assets/reboot.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="clickerw-title">
+        <b>しろくまクリッカー</b>&nbsp;©︎2021, Nikachu&nbsp;|&nbsp;
+        <span id="clickerw-title-version"></span>
+        <span id="clickerw-title-bulidNumber"></span>
+        &nbsp;<a href="https://nikachu2012.github.io" style="color: white;">ブログ</a>&nbsp;|&nbsp;<a href=""></a>
+    </div>
+
+
+
+    <div class="clickerw-gamebody">
+
+        <div class="clickerw-clickSpace">
+            <img src="image/sirokuma.png" class="clickSpace-pictureSirokuma" onclick="clickSirokuma();">
+            <div class="clickSpace-SirokumaHyouji">
+                <span id="hyoujiSirokumaSuu" style="font-size: xx-large;">0</span><br><span style="font-size: large;">しろくま</span>
+            </div>
+        </div>
+
+        <div class="clickerw-centerSpace">
+            <div class="centerSpace-headMenu">
+                <div class="headmenu-container">
+                    <div onclick="clickerSave();" class="button1 clickerw-container-style"><span class="container-text_transform">セーブ</span></div>
+                    <div onclick="settingHyouji();" class="button2 clickerw-container-style"><span class="container-text_transform">設定</span></div>
+                    <div class="button-text clickerw-container-style-textarea"><span class="container-text_transform" id="top-textarea">しろくまを作ろう</span></div>
+                    <div onclick="toukeiHyouji();" class="button3 clickerw-container-style"><span class="container-text_transform">統計<br>(未実装)</span></div>
+                    <div onclick="jissekiHyouji();" class="button4 clickerw-container-style"><span class="container-text_transform">実績<br>(未実装)</span></div>
+              </div>
+            </div>
+
+           
+        </div>
+
+        <div class="clickerw-upgradeSpace">
+            <div class="skill-buliding-title"><b>スキル</b></div>
+            <div class="upgradeSpace-Skill">
+                <div class="skillContainer">
+                    <div class="grid1 grid-style"><i class="far fa-hand-pointer upgrade-icon" style="color: aqua;"></i></div>
+                    <div class="grid2 grid-style"></div>
+                    <div class="grid3 grid-style"></div>
+                    <div class="grid4 grid-style"></div>
+                    <div class="grid5 grid-style"></div>
+                    <div class="grid6 grid-style"></div>
+                    <div class="grid7 grid-style"></div>
+                    <div class="grid8 grid-style"></div>
+                    <div class="grid9 grid-style"></div>
+                    <div class="grid10 grid-style"></div>
+                    <div class="grid11 grid-style"></div>
+                    <div class="grid12 grid-style"></div>
+                    <div class="grid13 grid-style"></div>
+                    <div class="grid14 grid-style"></div>
+                    <div class="grid15 grid-style"></div>
+                </div>
+
+                
+
+            </div>
+
+            <div class="skill-buliding-title"><b>アイテム</b></div>
+
+            <div class="upgradeSpace-buliding">
+
+
+                <div class="upgradeSpace-buliding-button" onclick="item1buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item1.png" alt="">
+                        <div class="bulid-button-name">
+                            シャープペン
+                            <div class="bulid-button-suu" id="item1nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item1havekazu">0</div>
+                </div>
+
+
+                <div class="upgradeSpace-buliding-button" onclick="item2buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item2.png" alt="">
+                        <div class="bulid-button-name">
+                            元素記号したじき
+                            <div class="bulid-button-suu" id="item2nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item2havekazu">0</div>
+                </div>
+
+
+                <div class="upgradeSpace-buliding-button" onclick="item3buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item3.png" alt="">
+                        <div class="bulid-button-name">
+                            家
+                            <div class="bulid-button-suu" id="item3nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item3havekazu">0</div>
+                </div>
+
+
+                <div class="upgradeSpace-buliding-button" onclick="item4buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item4.png" alt="">
+                        <div class="bulid-button-name">
+                            コンピュータLv1
+                            <div class="bulid-button-suu" id="item4nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item4havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item5buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item5.png" alt="">
+                        <div class="bulid-button-name">
+                            コンピュータLv2
+                            <div class="bulid-button-suu" id="item5nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item5havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item6buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item6.png" alt="">
+                        <div class="bulid-button-name">
+                            コンピュータLv3
+                            <div class="bulid-button-suu" id="item6nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item6havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item7buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item7.png" alt="">
+                        <div class="bulid-button-name">
+                            釣り場
+                            <div class="bulid-button-suu" id="item7nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item7havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item8buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item8.png" alt="">
+                        <div class="bulid-button-name">
+                            銀行
+                            <div class="bulid-button-suu" id="item8nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item8havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item9buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item9.png" alt="">
+                        <div class="bulid-button-name">
+                            雪
+                            <div class="bulid-button-suu" id="item9nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item9havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item10buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item10.png" alt="">
+                        <div class="bulid-button-name">
+                            クジラ
+                            <div class="bulid-button-suu" id="item10nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item10havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item11buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item11.png" alt="">
+                        <div class="bulid-button-name">
+                            コンピュータLv4
+                            <div class="bulid-button-suu" id="item11nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item11havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item12buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item12.png" alt="">
+                        <div class="bulid-button-name">
+                            コンピュータLv5
+                            <div class="bulid-button-suu" id="item12nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item12havekazu">0</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="itemdesc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture">kokoni<br>gazou</div>
+            <div class="itemdesc-upper-text">しろじゅまじっご
+            <br/>
+            <span style="font-size: small;">現在100しろくま / 現在20所持</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            aaa
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.js" integrity="sha512-XQDG6H87RgMf+aNFwDPCUcFwUf3t9liyqN/2BkJ8KGixupbjPwQHNhypNA972mLIkg4KPo4lkGmqAf3yfDz8hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/clicker.js"></script>
+    <script src="assets/onload.js"></script>
+    <script src="assets/showBulid.js"></script>
+</body>
+</html>

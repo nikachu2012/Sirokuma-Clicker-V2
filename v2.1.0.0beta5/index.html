@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しろくまクリッカー</title>
+
+    <link rel="stylesheet" href="assets/reboot.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style id="descHyoujiyou">
+
+    </style>
+</head>
+<body>
+    <div class="clickerw-title">
+        <b>しろくまクリッカー</b>&nbsp;©︎2021, Nikachu&nbsp;|&nbsp;
+        <span id="clickerw-title-version"></span>
+        <span id="clickerw-title-bulidNumber"></span>
+        &nbsp;<a href="https://nikachu2012.github.io" style="color: white;">ブログ</a>&nbsp;|&nbsp;<a href=""></a>
+    </div>
+
+
+
+    <div class="clickerw-gamebody">
+
+        <div class="clickerw-clickSpace">
+            <img src="image/sirokuma.png" class="clickSpace-pictureSirokuma" onclick="clickSirokuma();">
+            <div class="clickSpace-SirokumaHyouji">
+                <span id="hyoujiSirokumaSuu" style="font-size: xx-large;">0</span><br><span style="font-size: large;">しろくま</span>
+            </div>
+        </div>
+
+        <div class="clickerw-centerSpace">
+            <div class="centerSpace-headMenu">
+                <div class="headmenu-container">
+                    <div onclick="clickerSave();" class="button1 clickerw-container-style"><span class="container-text_transform">セーブ</span></div>
+                    <div onclick="settingHyouji();" class="button2 clickerw-container-style"><span class="container-text_transform">設定</span></div>
+                    <div class="button-text clickerw-container-style-textarea"><span class="container-text_transform" id="top-textarea">しろくまを作ろう</span></div>
+                    <div onclick="toukeiHyouji();" class="button3 clickerw-container-style"><span class="container-text_transform">統計<br>(未実装)</span></div>
+                    <div onclick="jissekiHyouji();" class="button4 clickerw-container-style"><span class="container-text_transform">実績<br>(未実装)</span></div>
+              </div>
+            </div>
+
+           
+        </div>
+
+        <div class="clickerw-upgradeSpace">
+            <div class="skill-buliding-title"><b>スキル</b></div>
+            <div class="upgradeSpace-Skill">
+                <div class="skillContainer">
+
+                    <div class="grid1 grid-style" onclick="skill1Click();" onmouseover="skill1over();" onmouseleave="skill1leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: red;"></i></div>
+                    <div class="grid2 grid-style" onclick="skill2Click();" onmouseover="skill2over();" onmouseleave="skill2leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: pink;"></i></div>
+                    <div class="grid3 grid-style" onclick="skill3Click();" onmouseover="skill3over();" onmouseleave="skill3leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: purple;"></i></div>
+                    <div class="grid4 grid-style" onclick="skill4Click();" onmouseover="skill4over();" onmouseleave="skill4leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: blueviolet;"></i></div>
+                    <div class="grid5 grid-style" onclick="skill5Click();" onmouseover="skill5over();" onmouseleave="skill5leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: royalblue;"></i></div>
+                    <div class="grid6 grid-style" onclick="skill6Click();" onmouseover="skill6over();" onmouseleave="skill6leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: blue;"></i></div>
+                    <div class="grid7 grid-style" onclick="skill7Click();" onmouseover="skill7over();" onmouseleave="skill7leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: lightblue;"></i></div>
+                    <div class="grid8 grid-style" onclick="skill8Click();" onmouseover="skill8over();" onmouseleave="skill8leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: cyan;"></i></div>
+                    <div class="grid9 grid-style" onclick="skill9Click();" onmouseover="skill9over();" onmouseleave="skill9leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: teal;"></i></div>
+                    <div class="grid10 grid-style" onclick="skill10Click();" onmouseover="skill10over();" onmouseleave="skill10leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: green;"></i></div>
+                    <div class="grid11 grid-style" onclick="skill11Click();" onmouseover="skill11over();" onmouseleave="skill11leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: limegreen;"></i></div>
+                    <div class="grid12 grid-style" onclick="skill12Click();" onmouseover="skill12over();" onmouseleave="skill12leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: lime;"></i></div>
+                    <div class="grid13 grid-style" onclick="skill13Click();" onmouseover="skill13over();" onmouseleave="skill13leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: yellow;"></i></div>
+                    <div class="grid14 grid-style" onclick="skill14Click();" onmouseover="skill14over();" onmouseleave="skill14leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: orange;"></i></div>
+                    <div class="grid15 grid-style" onclick="skill15Click();" onmouseover="skill15over();" onmouseleave="skill15leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: brown;"></i></div>
+                </div>
+
+                
+
+            </div>
+
+            <div class="skill-buliding-title"><b>アイテム</b></div>
+
+            <div class="upgradeSpace-buliding">
+
+
+                <div class="upgradeSpace-buliding-button" onclick="item1buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item1.png" alt="">
+                        <div class="bulid-button-name">
+                            シャープペン
+                            <div class="bulid-button-suu" id="item1nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item1havekazu">0</div>
+                </div>
+
+
+                <div class="upgradeSpace-buliding-button" onclick="item2buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item2.png" alt="">
+                        <div class="bulid-button-name">
+                            元素記号したじき
+                            <div class="bulid-button-suu" id="item2nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item2havekazu">0</div>
+                </div>
+
+
+                <div class="upgradeSpace-buliding-button" onclick="item3buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item3.png" alt="">
+                        <div class="bulid-button-name">
+                            家
+                            <div class="bulid-button-suu" id="item3nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item3havekazu">0</div>
+                </div>
+
+
+                <div class="upgradeSpace-buliding-button" onclick="item4buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item4.png" alt="">
+                        <div class="bulid-button-name">
+                            コンピュータLv1
+                            <div class="bulid-button-suu" id="item4nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item4havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item5buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item5.png" alt="">
+                        <div class="bulid-button-name">
+                            コンピュータLv2
+                            <div class="bulid-button-suu" id="item5nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item5havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item6buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item6.png" alt="">
+                        <div class="bulid-button-name">
+                            コンピュータLv3
+                            <div class="bulid-button-suu" id="item6nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item6havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item7buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item7.png" alt="">
+                        <div class="bulid-button-name">
+                            釣り場
+                            <div class="bulid-button-suu" id="item7nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item7havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item8buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item8.png" alt="">
+                        <div class="bulid-button-name">
+                            銀行
+                            <div class="bulid-button-suu" id="item8nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item8havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item9buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item9.png" alt="">
+                        <div class="bulid-button-name">
+                            雪
+                            <div class="bulid-button-suu" id="item9nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item9havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item10buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item10.png" alt="">
+                        <div class="bulid-button-name">
+                            クジラ
+                            <div class="bulid-button-suu" id="item10nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item10havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item11buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item11.png" alt="">
+                        <div class="bulid-button-name">
+                            コンピュータLv4
+                            <div class="bulid-button-suu" id="item11nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item11havekazu">0</div>
+                </div>
+
+                <div class="upgradeSpace-buliding-button" onclick="item12buy();">
+                    <div class="bulid-button-left">
+                        <img src="image/itempicture/item12.png" alt="">
+                        <div class="bulid-button-name">
+                            コンピュータLv5
+                            <div class="bulid-button-suu" id="item12nedan">100 しろくま</div>
+                        </div>
+                    </div>   
+                    <div class="bulid-button-havekazu" id="item12havekazu">0</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+<!-- 
+    ==========================================================
+    スキル説明
+    ==========================================================
+-->
+
+    <div class="itemdesc skill1desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: red;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(レッド)
+            <br>
+            <span style="font-size: small;">100しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill1kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が1⏩10になる<br><br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill2desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: pink;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(ピンク)
+            <br>
+            <span style="font-size: small;">1,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill2kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が10⏩50になる<br><br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill3desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: purple;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(パープル)
+            <br>
+            <span style="font-size: small;">10,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill3kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が50⏩100になる<br><br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill4desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: blueviolet;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(バイオレット)
+            <br>
+            <span style="font-size: small;">50,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill4kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が100⏩500になる<br><br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill5desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: royalblue;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(ロイヤルブルー)
+            <br>
+            <span style="font-size: small;">100,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill5kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が500⏩1,000になる<br><br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill6desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: blue;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(ブルー)
+            <br>
+            <span style="font-size: small;">500,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill6kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が1,000⏩5,000になる<br><br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill7desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: lightblue;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(ライトブルー)
+            <br>
+            <span style="font-size: small;">1,000,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill7kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が5,000⏩10,000になる<br><br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill8desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: cyan;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(シアン)
+            <br>
+            <span style="font-size: small;">5,000,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill8kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が10,000⏩50,000になる<br><br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill9desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: teal;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(ティール)
+            <br>
+            <span style="font-size: small;">10,000,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill9kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が50,000⏩100,000になる<br><br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill10desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: green;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(グリーン)
+            <br>
+            <span style="font-size: small;">50,000,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill10kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が100,000⏩500,000になる<br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill11desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: limegreen;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(ライムグリーン)
+            <br>
+            <span style="font-size: small;">100,000,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill11kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が500,000⏩1,000,000になる<br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill12desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: green;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(グリーン)
+            <br>
+            <span style="font-size: small;">500,000,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill12kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が1,000,000⏩5,000,000になる<br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill13desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: yellow;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(イエロー)
+            <br>
+            <span style="font-size: small;">800,000,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill13kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が5,000,000⏩8,000,000になる<br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill14desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: orange;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(オレンジ)
+            <br>
+            <span style="font-size: small;">1,000,000,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill14kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が8,000,000⏩10,000,000になる<br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+    <div class="itemdesc skill15desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: brown;"></i></div>
+            <div class="itemdesc-upper-text">ポインター(ブラウン)
+            <br>
+            <span style="font-size: small;">3,000,000,000しろくま</span><span style="font-size: small;" >&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill15kakutokuDesc">未獲得</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が10,000,000⏩15,000,000になる<br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+
+<!-- 
+    ==========================================================
+    アイテム説明
+    ==========================================================
+-->
+
+
+<!-- 
+    <div class="itemdesc skill1desc">
+        <div class="itemdesc-upper">
+            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: aqua;"></i></div>
+            <div class="itemdesc-upper-text">ポインター（ブルー）
+            <br>
+            <span style="font-size: small;" id="item1NedanDesc">現在100しろくま</span><span style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill1SyojiDesc">現在0所持</span>
+            </div>
+        </div>
+        <div class="itemdesc-kaisetu-text">
+            1クリックで増えるしろくま量が1⏩10になる<br><br><br>
+            <b>＜＜基本データ＞＞</b><br>
+            ❌多重購入&nbsp;❌アップグレード
+        </div>
+        <div class="itemdesc-bottom-text">
+            SIROKUMA-CLICKER
+        </div> 
+    </div>
+-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.js" integrity="sha512-XQDG6H87RgMf+aNFwDPCUcFwUf3t9liyqN/2BkJ8KGixupbjPwQHNhypNA972mLIkg4KPo4lkGmqAf3yfDz8hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/clicker.js"></script>
+    <script src="assets/onload.js"></script>
+    <script src="assets/showBulid.js"></script>
+    <script src="assets/mouseover.js"></script>
+</body>
+</html>
