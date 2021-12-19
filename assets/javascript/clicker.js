@@ -372,6 +372,9 @@ item13kosuu = 0;
 item14kosuu = 0;
 item15kosuu = 0;
 
+item1Hyouji = 0;
+
+
 item1fueruTan = 1; // 実質0.1/s 実際1/10s
 item2fueruTan = 1;
 item3fueruTan = 10;
@@ -409,15 +412,12 @@ buyKosuu = 1;
 bairitu = 1.15;
 
 
+
 function item1buy(){
     if(sirokumaSuu >= item1nedan){
-        herasuSirokuma(item1nedan * buyKosuu);
-        item1kosuu = item1kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item1nedan = Math.ceil(item1nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item1nedan);
+        item1nedan = Math.ceil(item1nedan * 1.15);
+        item1kosuu = item1kosuu + 1;
 
         document.getElementById('item1-sirokumacost').innerHTML = item1nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item1nedan').innerHTML = item1nedan.toLocaleString() + '&nbsp;しろくま';
@@ -425,17 +425,13 @@ function item1buy(){
         document.getElementById('item1havekazu').innerHTML = item1kosuu.toLocaleString();
         document.getElementById('item1MotterukazuHyouji').innerHTML = item1kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item1nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item1nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item2buy(){
     if(sirokumaSuu >= item2nedan){
-        herasuSirokuma(item2nedan * buyKosuu);
-        item2kosuu = item2kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item2nedan = Math.ceil(item2nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item2nedan);
+        item2nedan = Math.ceil(item2nedan * 1.15);
+        item2kosuu = item2kosuu + 1;
 
         document.getElementById('item2-sirokumacost').innerHTML = item2nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item2nedan').innerHTML = item2nedan.toLocaleString() + '&nbsp;しろくま';
@@ -443,17 +439,13 @@ function item2buy(){
         document.getElementById('item2havekazu').innerHTML = item2kosuu.toLocaleString();
         document.getElementById('item2MotterukazuHyouji').innerHTML = item2kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item2nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item2nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item3buy(){
     if(sirokumaSuu >= item3nedan){
-        herasuSirokuma(item3nedan * buyKosuu);
-        item3kosuu = item3kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item3nedan = Math.ceil(item3nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item3nedan);
+        item3nedan = Math.ceil(item3nedan * 1.15);
+        item3kosuu = item3kosuu + 1;
 
         document.getElementById('item3-sirokumacost').innerHTML = item3nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item3nedan').innerHTML = item3nedan.toLocaleString() + '&nbsp;しろくま';
@@ -461,17 +453,13 @@ function item3buy(){
         document.getElementById('item3havekazu').innerHTML = item3kosuu.toLocaleString();
         document.getElementById('item3MotterukazuHyouji').innerHTML = item3kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item3nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item3nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item4buy(){
     if(sirokumaSuu >= item4nedan){
-        herasuSirokuma(item4nedan * buyKosuu);
-        item4kosuu = item4kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item4nedan = Math.ceil(item4nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item4nedan);
+        item4nedan = Math.ceil(item4nedan * 1.15);
+        item4kosuu = item4kosuu + 1;
 
         document.getElementById('item4-sirokumacost').innerHTML = item4nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item4nedan').innerHTML = item4nedan.toLocaleString() + '&nbsp;しろくま';
@@ -479,17 +467,13 @@ function item4buy(){
         document.getElementById('item4havekazu').innerHTML = item4kosuu.toLocaleString();
         document.getElementById('item4MotterukazuHyouji').innerHTML = item4kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item4nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item4nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item5buy(){
     if(sirokumaSuu >= item5nedan){
-        herasuSirokuma(item5nedan * buyKosuu);
-        item5kosuu = item5kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item5nedan = Math.ceil(item5nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item5nedan);
+        item5nedan = Math.ceil(item5nedan * 1.15);
+        item5kosuu = item5kosuu + 1;
 
         document.getElementById('item5-sirokumacost').innerHTML = item5nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item5nedan').innerHTML = item5nedan.toLocaleString() + '&nbsp;しろくま';
@@ -497,17 +481,13 @@ function item5buy(){
         document.getElementById('item5havekazu').innerHTML = item5kosuu.toLocaleString();
         document.getElementById('item5MotterukazuHyouji').innerHTML = item5kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item5nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item5nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item6buy(){
     if(sirokumaSuu >= item6nedan){
-        herasuSirokuma(item6nedan * buyKosuu);
-        item6kosuu = item6kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item6nedan = Math.ceil(item6nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item6nedan);
+        item6nedan = Math.ceil(item6nedan * 1.15);
+        item6kosuu = item6kosuu + 1;
 
         document.getElementById('item6-sirokumacost').innerHTML = item6nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item6nedan').innerHTML = item6nedan.toLocaleString() + '&nbsp;しろくま';
@@ -515,17 +495,13 @@ function item6buy(){
         document.getElementById('item6havekazu').innerHTML = item6kosuu.toLocaleString();
         document.getElementById('item6MotterukazuHyouji').innerHTML = item6kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item6nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item6nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item7buy(){
     if(sirokumaSuu >= item7nedan){
-        herasuSirokuma(item7nedan * buyKosuu);
-        item7kosuu = item7kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item7nedan = Math.ceil(item7nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item7nedan);
+        item7nedan = Math.ceil(item7nedan * 1.15);
+        item7kosuu = item7kosuu + 1;
 
         document.getElementById('item7-sirokumacost').innerHTML = item7nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item7nedan').innerHTML = item7nedan.toLocaleString() + '&nbsp;しろくま';
@@ -533,17 +509,13 @@ function item7buy(){
         document.getElementById('item7havekazu').innerHTML = item7kosuu.toLocaleString();
         document.getElementById('item7MotterukazuHyouji').innerHTML = item7kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item7nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item7nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item8buy(){
     if(sirokumaSuu >= item8nedan){
-        herasuSirokuma(item8nedan * buyKosuu);
-        item8kosuu = item8kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item8nedan = Math.ceil(item8nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item8nedan);
+        item8nedan = Math.ceil(item8nedan * 1.15);
+        item8kosuu = item8kosuu + 1;
 
         document.getElementById('item8-sirokumacost').innerHTML = item8nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item8nedan').innerHTML = item8nedan.toLocaleString() + '&nbsp;しろくま';
@@ -551,17 +523,13 @@ function item8buy(){
         document.getElementById('item8havekazu').innerHTML = item8kosuu.toLocaleString();
         document.getElementById('item8MotterukazuHyouji').innerHTML = item8kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item8nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item8nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item9buy(){
     if(sirokumaSuu >= item9nedan){
-        herasuSirokuma(item9nedan * buyKosuu);
-        item9kosuu = item9kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item9nedan = Math.ceil(item9nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item9nedan);
+        item9nedan = Math.ceil(item9nedan * 1.15);
+        item9kosuu = item9kosuu + 1;
 
         document.getElementById('item9-sirokumacost').innerHTML = item9nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item9nedan').innerHTML = item9nedan.toLocaleString() + '&nbsp;しろくま';
@@ -569,17 +537,13 @@ function item9buy(){
         document.getElementById('item9havekazu').innerHTML = item9kosuu.toLocaleString();
         document.getElementById('item9MotterukazuHyouji').innerHTML = item9kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item9nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item9nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item10buy(){
     if(sirokumaSuu >= item10nedan){
-        herasuSirokuma(item10nedan * buyKosuu);
-        item10kosuu = item10kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item10nedan = Math.ceil(item10nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item10nedan);
+        item10nedan = Math.ceil(item10nedan * 1.15);
+        item10kosuu = item10kosuu + 1;
 
         document.getElementById('item10-sirokumacost').innerHTML = item10nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item10nedan').innerHTML = item10nedan.toLocaleString() + '&nbsp;しろくま';
@@ -587,17 +551,13 @@ function item10buy(){
         document.getElementById('item10havekazu').innerHTML = item10kosuu.toLocaleString();
         document.getElementById('item10MotterukazuHyouji').innerHTML = item10kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item10nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item10nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item11buy(){
     if(sirokumaSuu >= item11nedan){
-        herasuSirokuma(item11nedan * buyKosuu);
-        item11kosuu = item11kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item11nedan = Math.ceil(item11nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item11nedan);
+        item11nedan = Math.ceil(item11nedan * 1.15);
+        item11kosuu = item11kosuu + 1;
 
         document.getElementById('item11-sirokumacost').innerHTML = item11nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item11nedan').innerHTML = item11nedan.toLocaleString() + '&nbsp;しろくま';
@@ -605,17 +565,13 @@ function item11buy(){
         document.getElementById('item11havekazu').innerHTML = item11kosuu.toLocaleString();
         document.getElementById('item11MotterukazuHyouji').innerHTML = item11kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item11nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item11nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item12buy(){
     if(sirokumaSuu >= item12nedan){
-        herasuSirokuma(item12nedan * buyKosuu);
-        item12kosuu = item12kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item12nedan = Math.ceil(item12nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item12nedan);
+        item12nedan = Math.ceil(item12nedan * 1.15);
+        item12kosuu = item12kosuu + 1;
 
         document.getElementById('item12-sirokumacost').innerHTML = item12nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item12nedan').innerHTML = item12nedan.toLocaleString() + '&nbsp;しろくま';
@@ -623,17 +579,13 @@ function item12buy(){
         document.getElementById('item12havekazu').innerHTML = item12kosuu.toLocaleString();
         document.getElementById('item12MotterukazuHyouji').innerHTML = item12kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item12nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item12nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item13buy(){
     if(sirokumaSuu >= item13nedan){
-        herasuSirokuma(item13nedan * buyKosuu);
-        item13kosuu = item13kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item13nedan = Math.ceil(item13nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item13nedan);
+        item13nedan = Math.ceil(item13nedan * 1.15);
+        item13kosuu = item13kosuu + 1;
 
         document.getElementById('item13-sirokumacost').innerHTML = item13nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item13nedan').innerHTML = item13nedan.toLocaleString() + '&nbsp;しろくま';
@@ -641,17 +593,13 @@ function item13buy(){
         document.getElementById('item13havekazu').innerHTML = item13kosuu.toLocaleString();
         document.getElementById('item13MotterukazuHyouji').innerHTML = item13kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item13nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item13nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item14buy(){
     if(sirokumaSuu >= item14nedan){
-        herasuSirokuma(item14nedan * buyKosuu);
-        item14kosuu = item14kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item14nedan = Math.ceil(item14nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item14nedan);
+        item14nedan = Math.ceil(item14nedan * 1.15);
+        item14kosuu = item14kosuu + 1;
 
         document.getElementById('item14-sirokumacost').innerHTML = item14nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item14nedan').innerHTML = item14nedan.toLocaleString() + '&nbsp;しろくま';
@@ -659,17 +607,13 @@ function item14buy(){
         document.getElementById('item14havekazu').innerHTML = item14kosuu.toLocaleString();
         document.getElementById('item14MotterukazuHyouji').innerHTML = item14kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item14nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item14nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
 function item15buy(){
     if(sirokumaSuu >= item15nedan){
-        herasuSirokuma(item15nedan * buyKosuu);
-        item15kosuu = item15kosuu + buyKosuu;
-
-        const n = buyKosuu;
-        for(i=0; i < n; i++){
-            item15nedan = Math.ceil(item15nedan * bairitu * waribiki);
-        }
+        herasuSirokuma(item15nedan);
+        item15nedan = Math.ceil(item15nedan * 1.15);
+        item15kosuu = item15kosuu + 1;
 
         document.getElementById('item15-sirokumacost').innerHTML = item15nedan.toLocaleString() + '&nbsp;しろくま';
         document.getElementById('item15nedan').innerHTML = item15nedan.toLocaleString() + '&nbsp;しろくま';
@@ -677,8 +621,9 @@ function item15buy(){
         document.getElementById('item15havekazu').innerHTML = item15kosuu.toLocaleString();
         document.getElementById('item15MotterukazuHyouji').innerHTML = item15kosuu.toLocaleString() + '&nbsp;個';
     }
-    else{alert('しろくま数が' + item15nedan * buyKosuu + 'に達していません。しろくま数を貯めてください。')} 
+    else{alert('しろくま数が' + item15nedan + 'に達していません。しろくま数を貯めてください。')} 
 }
+
 
 
 /*
@@ -741,12 +686,13 @@ setInterval(() => {
     fuyasuSirokuma(item1fuyasu);
 }, 10000);
 
-
 function x1push(){
     buyKosuu = 1;
     document.getElementById('x1text').innerHTML = '<span style="text-shadow: #FFFFFF 1px 0 5px;">x1</span>';
     document.getElementById('x10text').innerHTML = 'x10';
     document.getElementById('x100text').innerHTML = 'x100';
+    
+
 }
 
 function x10push(){
@@ -762,7 +708,6 @@ function x100push(){
     document.getElementById('x10text').innerHTML = 'x10';
     document.getElementById('x100text').innerHTML = '<span style="text-shadow: #FFFFFF 1px 0 5px;">x100</span>';
 }
-
 function itemAllLoad(){
     document.getElementById('item1-sirokumacost').innerHTML = item1nedan.toLocaleString() + '&nbsp;しろくま';
     document.getElementById('item1nedan').innerHTML = item1nedan.toLocaleString() + '&nbsp;しろくま';
