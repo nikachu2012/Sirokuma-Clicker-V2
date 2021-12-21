@@ -10,5 +10,4 @@ clicker_bulid = "21000";
     console.log("最大値は9007199254740991[2^53]です")
 
     document.getElementById('clickerw-title-version').innerHTML = '<span class="clickerw-title-version" onclick="showBulidNumber();">version ' + clicker_version + '<span>';
-    
 }());
