@@ -22,9 +22,10 @@
 
     <style id="descHyoujiyou"></style>
     <style id="skillHyoujiyou"></style>
+    <style id="dialogHyoujiyou"></style>
 
 </head>
-<body>
+<body id="index_body">
     <div class="clickerw-title">
         <b>しろくまクリッカー</b>&nbsp;©︎2021, Nikachu&nbsp;|&nbsp;
         <span id="clickerw-title-version"></span>
@@ -37,7 +38,8 @@
     <div class="clickerw-gamebody">
 
         <div class="clickerw-clickSpace">
-            <img src="image/sirokuma.webp" alt="" class="clickSpace-pictureSirokuma" onclick="clickSirokuma();1">
+            <div class="clickSpace-ShopNameHyouji" onclick="changeShopName();" id="shopNameArea">polar bear<br>しろくまショップ</div>
+            <img src="image/sirokuma.webp" alt="" class="clickSpace-pictureSirokuma" onclick="clickSirokuma();">
             <div class="clickSpace-SirokumaHyouji">
                 <span id="hyoujiSirokumaSuu" style="font-size: xx-large;">0</span><br><span style="font-size: large;">しろくま</span>
             </div>
@@ -48,17 +50,17 @@
             <div class="centerSpace-headMenu">
                 <div class="headmenu-container">
                     <div onclick="dataSave();" class="button1 clickerw-container-style"><span class="container-text_transform">セーブ</span></div>
-                    <div onclick="settingHyouji();" class="button2 clickerw-container-style"><span class="container-text_transform">設定</span></div>
+                    <div onclick="showSetting();" class="button2 clickerw-container-style"><span class="container-text_transform">設定</span></div>
                     <div class="button-text clickerw-container-style-textarea"><span class="container-text_transform" id="top-textarea">しろくまを作ろう</span></div>
-                    <div onclick="toukeiHyouji();" class="button3 clickerw-container-style"><span class="container-text_transform">統計<br>(未実装)</span></div>
-                    <div onclick="jissekiHyouji();" class="button4 clickerw-container-style"><span class="container-text_transform">実績<br>(未実装)</span></div>
+                    <div onclick="showToukei();" class="button3 clickerw-container-style"><span class="container-text_transform">統計&実績<br>(未実装)</span></div>
+                    <div onclick="showTensei();" class="button4 clickerw-container-style"><span class="container-text_transform">転生<br>(未実装)</span></div>
+                    <div onclick="showInfo();" class="button5 clickerw-container-style"><span class="container-text_transform">Information</span></div>
               </div>
             </div>
-            
+            <!--
             <div class="clickerw-centerContents">
                 <div class="centerContents-center">
-                    <div class="centerContents-title contents_text"><span class="centerContents-titletext">Infomation</span></div><br>
-                    
+                    <div class="centerContents-title contents_text"><span class="centerContents-titletext">Infomation</span></div><br>                                                         
                     <div>
                         <div class="contents_text"><span class="centerContents-head2">しろくまクリッカーについて</span></div>
                         <div class="centerContents-contents">
@@ -69,9 +71,7 @@
                                 <li>Copyright &copy; 2021 Nikachu All rights reserved.</li>
                             </ul>
                         </div>
-                        <!-- ベータ版文章 -->
                         <h2 style="color: red;">このソフトウェアはベータ版です。まだ未実装が含まれており、完成版ではないことをご了承ください。2021/12/18 nikachu</h1>
-                        <!--- ベータ版文章 -->
                     </div>
                     <div>
                         <div class="contents_text"><span class="centerContents-head2">更新履歴</span></div><br><br>
@@ -86,7 +86,10 @@
                     </div>
                 </div>
             </div>
-
+        -->
+            <div class="clickerw-centerContents" id="clickerw-centerContents">
+                
+            </div>
         </div>
 
         <div class="clickerw-upgradeSpace">
@@ -403,13 +406,15 @@
 
             </div>
 
+            
+
             <div class="skill-buliding-title">
                 <b style="padding-top: 2px;">アイテム</b>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span style="cursor: pointer;">
                     <span onclick="x1push();" id="x1text"><span style="text-shadow: #FFFFFF 1px 0 5px;">x1</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span onclick="x10push();" id="x10text">x10(未実装)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span onclick="x100push();" id="x100text">x100(未実装)</span>
+                    <span onclick="x10push();" id="x10text">x10</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span onclick="x100push();" id="x100text">x100</span>
                 </span>
             </div>
 
@@ -573,6 +578,13 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="dialog_body">
+        <div class="dialog_batubotan" onclick="batuclick();"><i class="fas fa-times"></i></div>
+        <div class="dialog_title" id="dialogText_title">%title%</div>
+        <div class="dialog_text" id="dialogText_text">%text%</div>
+        <div class="dialog_button" id="dialogButton"><button>はい</button><button>いいえ</button></div>
     </div>
 
 <!-- 
@@ -5267,15 +5279,16 @@
     </div>
 -->
 
-
+    <script src="assets/javascript/clicker.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.js" integrity="sha512-XQDG6H87RgMf+aNFwDPCUcFwUf3t9liyqN/2BkJ8KGixupbjPwQHNhypNA972mLIkg4KPo4lkGmqAf3yfDz8hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="assets/javascript/error.js"></script>
     <script src="assets/javascript/onload.js"></script>
     <script src="assets/javascript/showBulid.js"></script>
     
     <script src="assets/javascript/skillShowChange.js"></script>
     <script src="assets/javascript/save.js"></script>
-    <script src="assets/javascript/clicker.js"></script>
+    
+    <script src="assets/javascript/export.js"></script>
+    <script src="assets/javascript/FileSaver.js"></script>
 
     <script>
         pageFirstView = Number(localStorage.getItem('pageFirstView'));

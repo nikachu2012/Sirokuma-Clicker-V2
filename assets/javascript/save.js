@@ -75,6 +75,8 @@ function dataSave(){
 
     localStorage.setItem('sirokumaOneClick', sirokumaOneClick)
 
+    localStorage.setItem('shopname', shopname)
+
     return('データをLocalStorageに保存しました。')
 
     // localStorage.setItem('sirokumaSuu', sirokumaSuu)
@@ -167,7 +169,9 @@ function dataLoad(){
     
     sirokumaOneClick = localStorage.getItem('sirokumaOneClick')
     bairitu = localStorage.getItem('bairitu')
+    shopname = localStorage.getItem('shopname')
 
+    
     
     // 文字列を数字に変換
     sirokumaSuu = Number(sirokumaSuu)
@@ -245,6 +249,7 @@ function dataLoad(){
     
     updateHyouji();
     itemAllLoad();
+    changeShopUpdate();
 
     if (skill15kakutoku == 1) {
         document.getElementById('skill15kakutokuDesc').innerHTML = "獲得済み";
@@ -297,9 +302,15 @@ function dataLoad(){
 }
 
 function dataRemove(){
-    window.confirm('この操作を行うとデータが削除され、ページが再読み込みされます。よろしいですか？')
-    localStorage.clear();
-    window.location.reload();
+    var result = window.confirm('この操作を行うとデータが削除され、ページが再読み込みされます。よろしいですか？')
+    if( result ){
+        localStorage.clear();
+        window.location.reload();
+    }
+    else{
+        
+    }
+
 }
 
 setInterval(() => {

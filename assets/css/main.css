@@ -63,6 +63,15 @@ body {
     user-select: none;
 }
 
+.clickSpace-ShopNameHyouji{
+    margin-top: 20px;
+    font-size: x-large;
+
+    max-height: 100px;
+}
+.clickSpace-ShopNameHyouji:hover{
+    text-shadow: 0 0 10px #fff,0 0 15px #fff;
+}
 
 
 .clickSpace-pictureSirokuma{
@@ -128,15 +137,15 @@ body {
 
 .headmenu-container {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 10% 10% 60% 10% 10%;
     grid-template-rows: 50% 50%;
     grid-auto-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "button1 button-text button-text button3"
-      "button2 button-text button-text button4";
+      "button1 button1 button-text button3 button3"
+      "button2 button5 button-text button4 button4";
     width: 100%;
     height: 100%;
 
@@ -161,6 +170,10 @@ body {
   
 .button4 {
     grid-area: button4;
+}
+
+.button5 {
+    grid-area: button5;
 }
 
 .clickerw-container-style{
@@ -595,4 +608,51 @@ body {
     position: absolute;
     top: 280px;
     right: 350px;
+}
+
+/*=============================================
+  ダイアログ
+  =============================================*/
+
+.dialog_body{
+    width: 300px;
+    height: 250px;
+
+    border: solid 1px black;
+    background: url(../../image/dialog.jpg);
+    
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    position: relative;
+
+    visibility: hidden;
+    
+    /* visibility: visible; */
+}
+.dialog_batubotan{
+    position: absolute;
+    right: 5px;
+    top: 0;
+    cursor: pointer;
+}
+
+.dialog_title{
+    text-align: center;
+    margin-top: 3px;
+}
+
+.dialog_text{
+    margin: 5px 5px 5px 5px;
+}
+
+.dialog_button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) ;
+    -webkit-transform: translateX(-50%);
+
+    bottom: 5px;
 }
