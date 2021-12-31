@@ -43,8 +43,8 @@ body {
   =============================================*/
 
 .clickerw-clickSpace{
-    height: calc(100% - 24px);
-    height: -webkit-calc(100% - 24px);
+    height: calc(100% - 22px);
+    height: -webkit-calc(100% - 22px);
     
     width: 340px;
     border: solid;
@@ -111,8 +111,8 @@ body {
   =============================================*/
 
 .clickerw-centerSpace{
-    height: calc(100% - 24px);
-    height: -webkit-calc(100% - 24px);
+    height: calc(100% - 22px);
+    height: -webkit-calc(100% - 22px);
     
     width: calc(100% - 340px - 340px);
     border: solid;
@@ -279,8 +279,8 @@ body {
   右側スペース（アップグレード）
   =============================================*/
 .clickerw-upgradeSpace{
-    height: calc(100% - 24px);
-    height: -webkit-calc(100% - 24px);
+    height: calc(100% - 22px);
+    height: -webkit-calc(100% - 22px);
     
     width: 340px;
     border: solid;
