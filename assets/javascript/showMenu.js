@@ -66,15 +66,15 @@ function showInfo(){
         <div>
             <div class="contents_text"><span class="centerContents-head2">更新履歴</span></div><br>
 
-            <div class="contents_text"><span class="centerContents-head3">2021/12/18 version2.1.0.0 Public Beta 2.1</span></div>
+            <div class="contents_text"><span class="centerContents-head3">2022/02/04 version2.1.0.0 Public Beta 2.1</span></div>
             <div class="centerContents-contents">
                 <ul>
                     <li>ポインターのスキルが正しく購入できない不具合を修正</li>
                 </ul>
-                2021.01.04 12:50 p.m. by nikachu<br><br>
+                2022.01.04 12:50 p.m. by nikachu<br><br>
             </div>
 
-            <div class="contents_text"><span class="centerContents-head3">2021/12/18 version2.1.0.0 Public Beta 2</span></div>
+            <div class="contents_text"><span class="centerContents-head3">2021/12/25 version2.1.0.0 Public Beta 2</span></div>
             <div class="centerContents-contents">
                 <ul>
                     <li>ファイルでのセーブ機能の追加</li>
