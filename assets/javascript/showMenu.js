@@ -27,6 +27,11 @@ function showSetting(){
                     <button onclick="dataRemove();">セーブを削除</button>&nbsp;&nbsp;<span style="color: red;"><i class="fas fa-exclamation-circle"></i>この操作をするとデータが削除されます。</span>
                 </div>
             </div>
+            <br>
+            <div class="contents_text"><span class="centerContents-head2">高度な設定</span></div>
+            <div class="centerContents-contents">
+                カスタムCSS
+            </div>
         </div>
     </div>
     `
@@ -61,7 +66,15 @@ function showInfo(){
         <div>
             <div class="contents_text"><span class="centerContents-head2">更新履歴</span></div><br>
 
-            <div class="contents_text"><span class="centerContents-head3">2021/12/18 version1.0.0 Public Beta 2</span></div>
+            <div class="contents_text"><span class="centerContents-head3">2021/12/18 version2.1.0.0 Public Beta 2.1</span></div>
+            <div class="centerContents-contents">
+                <ul>
+                    <li>ポインターのスキルが正しく購入できない不具合を修正</li>
+                </ul>
+                2021.01.04 12:50 p.m. by nikachu<br><br>
+            </div>
+
+            <div class="contents_text"><span class="centerContents-head3">2021/12/18 version2.1.0.0 Public Beta 2</span></div>
             <div class="centerContents-contents">
                 <ul>
                     <li>ファイルでのセーブ機能の追加</li>
@@ -73,7 +86,7 @@ function showInfo(){
             </div>
 
 
-            <div class="contents_text"><span class="centerContents-head3">2021/12/18 version1.0.0 Public Beta 1</span></div>
+            <div class="contents_text"><span class="centerContents-head3">2021/12/18 version2.1.0.0 Public Beta 1</span></div>
             <div class="centerContents-contents">
                 <ul>
                     <li>初期版の公開</li>

@@ -79,6 +79,9 @@ function dataSave(){
 
     return('データをLocalStorageに保存しました。')
 
+    toastr.info('セーブしました');
+
+
     // localStorage.setItem('sirokumaSuu', sirokumaSuu)
 
 }

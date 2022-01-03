@@ -91,7 +91,7 @@ function skill2Click() {
     if (skill2kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill2cost) {
-            if (skill5kakutoku == 1) {
+            if (skill1kakutoku == 1) {
                 herasuSirokuma(skill2cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill2kakutoku = 1; // 獲得変数に１
@@ -106,7 +106,7 @@ function skill3Click() {
     if (skill3kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill3cost) {
-            if (skill5kakutoku == 1) {
+            if (skill2kakutoku == 1) {
                 herasuSirokuma(skill3cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill3kakutoku = 1; // 獲得変数に１
@@ -121,7 +121,7 @@ function skill4Click() {
     if (skill4kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill4cost) {
-            if (skill5kakutoku == 1) {
+            if (skill3kakutoku == 1) {
                 herasuSirokuma(skill4cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill4kakutoku = 1; // 獲得変数に１
@@ -136,7 +136,7 @@ function skill5Click() {
     if (skill5kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill5cost) {
-            if (skill5kakutoku == 1) {
+            if (skill4kakutoku == 1) {
                 herasuSirokuma(skill5cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill5kakutoku = 1; // 獲得変数に１
@@ -166,7 +166,7 @@ function skill7Click() {
     if (skill7kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill7cost) {
-            if (skill5kakutoku == 1) {
+            if (skill6kakutoku == 1) {
                 herasuSirokuma(skill7cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill7kakutoku = 1; // 獲得変数に１
@@ -181,7 +181,7 @@ function skill8Click() {
     if (skill8kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill8cost) {
-            if (skill5kakutoku == 1) {
+            if (skill7kakutoku == 1) {
                 herasuSirokuma(skill8cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill8kakutoku = 1; // 獲得変数に１
@@ -195,7 +195,7 @@ function skill8Click() {
     if (skill9kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill9cost) {
-            if (skill5kakutoku == 1) {
+            if (skill8kakutoku == 1) {
                 herasuSirokuma(skill9cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill9kakutoku = 1; // 獲得変数に１
@@ -209,7 +209,7 @@ function skill8Click() {
     if (skill10kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill10cost) {
-            if (skill5kakutoku == 1) {
+            if (skill9kakutoku == 1) {
                 herasuSirokuma(skill10cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill10kakutoku = 1; // 獲得変数に１
@@ -223,7 +223,7 @@ function skill8Click() {
     if (skill11kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill11cost) {
-            if (skill5kakutoku == 1) {
+            if (skill10kakutoku == 1) {
                 herasuSirokuma(skill11cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill11kakutoku = 1; // 獲得変数に１
@@ -237,7 +237,7 @@ function skill8Click() {
     if (skill12kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill12cost) {
-            if (skill5kakutoku == 1) {
+            if (skill11kakutoku == 1) {
                 herasuSirokuma(skill12cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill12kakutoku = 1; // 獲得変数に１
@@ -251,7 +251,7 @@ function skill8Click() {
     if (skill13kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill13cost) {
-            if (skill5kakutoku == 1) {
+            if (skill12kakutoku == 1) {
                 herasuSirokuma(skill13cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill13kakutoku = 1; // 獲得変数に１
@@ -265,7 +265,7 @@ function skill8Click() {
     if (skill14kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill14cost) {
-            if (skill5kakutoku == 1) {
+            if (skill13kakutoku == 1) {
                 herasuSirokuma(skill14cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill14kakutoku = 1; // 獲得変数に１
@@ -279,7 +279,7 @@ function skill8Click() {
     if (skill15kakutoku == 1) { alert('すでに獲得しています') }
     else {
         if (sirokumaSuu >= skill15cost) {
-            if (skill5kakutoku == 1) {
+            if (skill14kakutoku == 1) {
                 herasuSirokuma(skill15cost); //コスト分しろくま数からひく
                 sirokumaOneClick = 5000; // しろくまが１クリックで増える量調整
                 skill15kakutoku = 1; // 獲得変数に１
