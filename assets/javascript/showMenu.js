@@ -29,8 +29,6 @@ function showSetting(){
                 </div>
             </div>
             <br>
-<<<<<<< Updated upstream
-=======
             <div class="contents_text"><span class="centerContents-head2">高度な設定</span></div>
             <div class="centerContents-contents">
                 <span style="font-size: large;">カスタムCSS</span><br>
@@ -45,7 +43,6 @@ function showSetting(){
                 <textarea id="customjs" style="width: 97%; height: 200px;"></textarea><br>
                 <button onclick="customJS_confirm()">適用</button>
             </div>
->>>>>>> Stashed changes
         </div>
     </div>
     `
@@ -83,8 +80,6 @@ function showInfo(){
         <div>
             <div class="contents_text"><span class="centerContents-head2">更新履歴</span></div><br>
 
-<<<<<<< Updated upstream
-=======
             <div class="contents_text"><span class="centerContents-head3">2022/xx/xx version2.1.0.0 Public Beta 2.1</span></div>
             <div class="centerContents-contents">
                 <ul>
@@ -97,7 +92,6 @@ function showInfo(){
                 2022.01.04 12:50 p.m. by nikachu<br><br>
             </div>
 
->>>>>>> Stashed changes
             <div class="contents_text"><span class="centerContents-head3">2022/01/04 version2.1.0.0 Public Beta 2.1</span></div>
             <div class="centerContents-contents">
                 <ul>
