@@ -80,7 +80,7 @@ function showInfo(){
         <div>
             <div class="contents_text"><span class="centerContents-head2">更新履歴</span></div><br>
 
-            <div class="contents_text"><span class="centerContents-head3">2022/xx/xx version2.1.0.0 Public Beta 2.1</span></div>
+            <div class="contents_text"><span class="centerContents-head3">2022/01/08 version2.1.0.0 Public Beta 3</span></div>
             <div class="centerContents-contents">
                 <ul>
                     <li>カスタムCSS利用機能の追加</li>
@@ -89,7 +89,7 @@ function showInfo(){
                     <li>informationの変更</li>
                     <li>上部分のメニューボタンのサイズ固定</li>
                 </ul>
-                2022.01.04 12:50 p.m. by nikachu<br><br>
+                2022.01.08 23:27 p.m. by nikachu<br><br>
             </div>
 
             <div class="contents_text"><span class="centerContents-head3">2022/01/04 version2.1.0.0 Public Beta 2.1</span></div>

@@ -1,6 +1,6 @@
 // バージョン指定
-clicker_version = "2.1.0.0 PublicBeta 2.1";
-clicker_bulid = "21021";
+clicker_version = "2.1.0.0 PublicBeta 3";
+clicker_bulid = "21030";
 
 
 (function () {

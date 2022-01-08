@@ -22,13 +22,21 @@ body {
     padding-bottom: 3px;
 
     user-select: none;
-    
-    cursor: pointer;
+
 }
 
 .clickerw-title-version:hover{
     text-decoration:underline;
     text-decoration-color:#FFFFFF;
+        
+    cursor: pointer;
+}
+
+.electron-link:hover{
+    text-decoration:underline;
+    text-decoration-color:#FFFFFF;
+
+    cursor: pointer;
 }
 
 /*=============================================
