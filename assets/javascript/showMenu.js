@@ -15,6 +15,7 @@ settingHyouji = 0;
 function showSetting(){
     var hyoujiText = `
     <div class="centerContents-center">
+        <div class="tojiruButton" onclick="showSetting()"><i class="fas fa-times" style="color: white; font-size:x-large;"></i></div>
         <div class="centerContents-title contents_text"><span class="centerContents-titletext">設定</span></div><br>
         <div>
             <div class="contents_text"><span class="centerContents-head2">一般設定</span></div>
@@ -28,15 +29,29 @@ function showSetting(){
                 </div>
             </div>
             <br>
+<<<<<<< Updated upstream
+=======
             <div class="contents_text"><span class="centerContents-head2">高度な設定</span></div>
             <div class="centerContents-contents">
-                カスタムCSS
+                <span style="font-size: large;">カスタムCSS</span><br>
+                カスタムCSSは再読み込みすると適用されなくなります。<br>
+                <textarea id="customcss" style="width: 97%; height: 200px;"></textarea><br>
+                <button onclick="customCSS_confirm()">適用</button><br><br>
             </div>
+
+            <div class="centerContents-contents">
+                <span style="font-size: large;">カスタムJavaScript</span><br>
+                カスタムJavaScriptは再読み込みすると適用されなくなります。<br>
+                <textarea id="customjs" style="width: 97%; height: 200px;"></textarea><br>
+                <button onclick="customJS_confirm()">適用</button>
+            </div>
+>>>>>>> Stashed changes
         </div>
     </div>
     `
 
     if(settingHyouji == 0){
+        infoHyouji = 0;
         document.getElementById('clickerw-centerContents').innerHTML = hyoujiText;
         settingHyouji = 1;
     }
@@ -50,6 +65,7 @@ infoHyouji = 0;
 function showInfo(){
     var hyoujiText = `
     <div class="centerContents-center">
+        <div class="tojiruButton" onclick="showInfo()"><i class="fas fa-times" style="color: white; font-size:x-large;"></i></div>
         <div class="centerContents-title contents_text"><span class="centerContents-titletext">Information</span></div><br>                                                         
         <div>
             <div class="contents_text"><span class="centerContents-head2">しろくまクリッカーについて</span></div>
@@ -58,6 +74,7 @@ function showInfo(){
                     <li>このゲームは<a href="https://github.com/nikachu2012" style="color: white;">ニカチュウ</a>が制作しました。</li>
                     <li>ただいまデバッグ担当者を募集中です。やりたい方はDMに送ってください。今ならデバッグ担当をするとこのゲームにクレジットが表記されます。</li>
                     <li style="color: red;">注：バグを発見した際はニカチュウまでご報告ください。よろしくお願いします。</li>
+                    <li>寄付をしたいとかいう変な方がおりましたら<a href="mailto:sirokumaclicker@gmail.com" style="color: white;">sirokumaclicker@gmail.com</a>までAmazonギフト券を送ってください。</li>
                     <li>Copyright &copy; 2021 Nikachu All rights reserved.</li>
                 </ul>
             </div>
@@ -66,12 +83,27 @@ function showInfo(){
         <div>
             <div class="contents_text"><span class="centerContents-head2">更新履歴</span></div><br>
 
-            <div class="contents_text"><span class="centerContents-head3">2022/02/04 version2.1.0.0 Public Beta 2.1</span></div>
+<<<<<<< Updated upstream
+=======
+            <div class="contents_text"><span class="centerContents-head3">2022/xx/xx version2.1.0.0 Public Beta 2.1</span></div>
+            <div class="centerContents-contents">
+                <ul>
+                    <li>カスタムCSS利用機能の追加</li>
+                    <li>カスタムJS利用機能の追加</li>
+                    <li>通知機能の追加</li>
+                    <li>informationの変更</li>
+                    <li>上部分のメニューボタンのサイズ固定</li>
+                </ul>
+                2022.01.04 12:50 p.m. by nikachu<br><br>
+            </div>
+
+>>>>>>> Stashed changes
+            <div class="contents_text"><span class="centerContents-head3">2022/01/04 version2.1.0.0 Public Beta 2.1</span></div>
             <div class="centerContents-contents">
                 <ul>
                     <li>ポインターのスキルが正しく購入できない不具合を修正</li>
                 </ul>
-                2022.01.04 12:50 p.m. by nikachu<br><br>
+                2021.01.04 12:50 p.m. by nikachu<br><br>
             </div>
 
             <div class="contents_text"><span class="centerContents-head3">2021/12/25 version2.1.0.0 Public Beta 2</span></div>
@@ -101,6 +133,7 @@ function showInfo(){
     `
 
     if(infoHyouji == 0){
+        settingHyouji = 0;
         document.getElementById('clickerw-centerContents').innerHTML = hyoujiText;
         infoHyouji = 1;
     }

@@ -1237,10 +1237,30 @@ function dataImport_fileB() {
             //ファイルの読み込み完了後に内容をコンソールに出力する
             reader.onload = () => {
                 dataImport(reader.result)
+                toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-bottom-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                toastr["success"]("ファイルからロードしました")
                 batuclick();
             };
         }
     });
+
+
 }
 
 function dataImport_ButtonB() {
@@ -1250,9 +1270,28 @@ function dataImport_ButtonB() {
     }
     else {
         dataImport(element.value);
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        toastr["success"]("テキストからロードしました")
         batuclick();
     }
 
+    
 }
 
 function dataExport_File() {
@@ -1282,6 +1321,25 @@ function dataExport_File() {
 
 
     saveAs(blob, 'SirokumaClickerSAVE-' + yyyymmddhhmiss() + '.txt');
+
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+    toastr["success"]("ファイルに保存しました")
 }
 
 // ===========================================
@@ -1348,3 +1406,56 @@ function error_critical(errorcode){
     window.location.reload();
 }
 */
+
+// ==========================================
+// カスタムCSS適用
+// ==========================================
+
+function customCSS_confirm(){
+    const customCSS = document.getElementById("customcss").value;
+    document.getElementById("customCSS_tekiyou").textContent = customCSS;
+
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+    toastr["info"]("カスタムCSSを読み込みました。")
+}
+
+
+function customJS_confirm(){
+    const customJS = document.getElementById("customjs").value;
+    document.getElementById("customJS_tekiyou").textContent = customJS;
+
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+    toastr["info"]("カスタムJavaScriptを読み込みました。")
+}

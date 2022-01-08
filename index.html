@@ -25,6 +25,7 @@
     <style id="descHyoujiyou"></style>
     <style id="skillHyoujiyou"></style>
     <style id="dialogHyoujiyou"></style>
+    <style id="customCSS_tekiyou"></style>
 
 </head>
 <body id="index_body">
@@ -51,47 +52,27 @@
         <div class="clickerw-centerSpace">
             <div class="centerSpace-headMenu">
                 <div class="headmenu-container">
-                    <div onclick="dataSave();" class="button1 clickerw-container-style"><span class="container-text_transform">セーブ</span></div>
-                    <div onclick="showSetting();" class="button2 clickerw-container-style"><span class="container-text_transform">設定</span></div>
+                    <div class="headmenu-container-left">
+                        <div onclick="dataSave();" class="button1 clickerw-container-style"><span class="container-text_transform">セーブ</span></div>
+                        <div style="display: flex;">
+                            <div onclick="showSetting();" class="button2 clickerw-container-style"><span class="container-text_transform">設定</span></div>
+                            <div onclick="showInfo();" class="button5 clickerw-container-style"><span class="container-text_transform">Information</span></div>
+                        </div>
+                        
+                    </div>
+                    
                     <div class="button-text clickerw-container-style-textarea"><span class="container-text_transform" id="top-textarea">しろくまを作ろう</span></div>
-                    <div onclick="showToukei();" class="button3 clickerw-container-style"><span class="container-text_transform">統計&実績<br>(未実装)</span></div>
-                    <div onclick="showTensei();" class="button4 clickerw-container-style"><span class="container-text_transform">転生<br>(未実装)</span></div>
-                    <div onclick="showInfo();" class="button5 clickerw-container-style"><span class="container-text_transform">Information</span></div>
+
+                    <div class="headmenu-container-left">
+                        <div onclick="showToukei();" class="button3 clickerw-container-style"><span class="container-text_transform">統計&実績<br>(未実装)</span></div>
+                        <div onclick="showTensei();" class="button4 clickerw-container-style"><span class="container-text_transform">転生<br>(未実装)</span></div>
+                    </div>
+                    
+                    
               </div>
             </div>
-            <!--
-            <div class="clickerw-centerContents">
-                <div class="centerContents-center">
-                    <div class="centerContents-title contents_text"><span class="centerContents-titletext">Infomation</span></div><br>                                                         
-                    <div>
-                        <div class="contents_text"><span class="centerContents-head2">しろくまクリッカーについて</span></div>
-                        <div class="centerContents-contents">
-                            <ul>
-                                <li>このゲームは<a href="https://github.com/nikachu2012" style="color: white;">ニカチュウ</a>が制作しました。</li>
-                                <li>ただいまデバッグ担当者を募集中です。やりたい方はDMに送ってください。今ならデバッグ担当をするとこのゲームにクレジットが表記されます。</li>
-                                <li style="color: red;">注：バグを発見した際はニカチュウまでご報告ください。よろしくお願いします。</li>
-                                <li>Copyright &copy; 2021 Nikachu All rights reserved.</li>
-                            </ul>
-                        </div>
-                        <h2 style="color: red;">このソフトウェアはベータ版です。まだ未実装が含まれており、完成版ではないことをご了承ください。2021/12/18 nikachu</h1>
-                    </div>
-                    <div>
-                        <div class="contents_text"><span class="centerContents-head2">更新履歴</span></div><br><br>
-                        <div class="contents_text"><span class="centerContents-head3">2021/12/18 version1.0.0 Public Beta 1</span></div>
-                        <div class="centerContents-contents">
-                            <ul>
-                                <li>初期版の公開</li>
-                                <li>バージョン１の機能はほとんど搭載したつもりですが、コードをすべて書き直しているため、バグがあったらご報告ください。</li>
-                                <li style="color: red;">まだポインター以外のスキルは実装されていません。</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        -->
-            <div class="clickerw-centerContents" id="clickerw-centerContents">
-                
-            </div>
+            <div class="clickerw-centerContents" id="clickerw-centerContents">    
+</div>
         </div>
 
         <div class="clickerw-upgradeSpace">
@@ -428,7 +409,7 @@
                         <img src="image/itempicture/item1.png" alt="">
                         <div class="bulid-button-name">
                             シャープペン
-                            <div class="bulid-button-suu" id="item1nedan">15 しろくま</div>
+                            <div class="bulid-button-suu" id="item1nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item1havekazu">0</div>
@@ -438,7 +419,7 @@
                         <img src="image/itempicture/item2.png" alt="">
                         <div class="bulid-button-name">
                             元素記号したじき
-                            <div class="bulid-button-suu" id="item2nedan">100 しろくま</div>
+                            <div class="bulid-button-suu" id="item2nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item2havekazu">0</div>
@@ -448,7 +429,7 @@
                         <img src="image/itempicture/item3.png" alt="">
                         <div class="bulid-button-name">
                             家
-                            <div class="bulid-button-suu" id="item3nedan">1000 しろくま</div>
+                            <div class="bulid-button-suu" id="item3nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item3havekazu">0</div>
@@ -458,7 +439,7 @@
                         <img src="image/itempicture/item4.png" alt="">
                         <div class="bulid-button-name">
                             コンピュータ
-                            <div class="bulid-button-suu" id="item4nedan">10000 しろくま</div>
+                            <div class="bulid-button-suu" id="item4nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item4havekazu">0</div>
@@ -468,7 +449,7 @@
                         <img src="image/itempicture/item5.png" alt="">
                         <div class="bulid-button-name">
                             釣り場
-                            <div class="bulid-button-suu" id="item5nedan">110000 しろくま</div>
+                            <div class="bulid-button-suu" id="item5nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item5havekazu">0</div>
@@ -478,7 +459,7 @@
                         <img src="image/itempicture/item6.png" alt="">
                         <div class="bulid-button-name">
                             銀行
-                            <div class="bulid-button-suu" id="item6nedan">5800000 しろくま</div>
+                            <div class="bulid-button-suu" id="item6nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item6havekazu">0</div>
@@ -488,7 +469,7 @@
                         <img src="image/itempicture/item7.png" alt="">
                         <div class="bulid-button-name">
                             雪
-                            <div class="bulid-button-suu" id="item7nedan">12500000 しろくま</div>
+                            <div class="bulid-button-suu" id="item7nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item7havekazu">0</div>
@@ -498,7 +479,7 @@
                         <img src="image/itempicture/item8.png" alt="">
                         <div class="bulid-button-name">
                             クジラ
-                            <div class="bulid-button-suu" id="item8nedan">13000000 しろくま</div>
+                            <div class="bulid-button-suu" id="item8nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item8havekazu">0</div>
@@ -508,7 +489,7 @@
                         <img src="image/itempicture/item9.png" alt="">
                         <div class="bulid-button-name">
                             工場
-                            <div class="bulid-button-suu" id="item9nedan">135000000 しろくま</div>
+                            <div class="bulid-button-suu" id="item9nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item9havekazu">0</div>
@@ -518,7 +499,7 @@
                         <img src="image/itempicture/item10.png" alt="">
                         <div class="bulid-button-name">
                             ３Dプリンター
-                            <div class="bulid-button-suu" id="item10nedan">1400000000 しろくま</div>
+                            <div class="bulid-button-suu" id="item10nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item10havekazu">0</div>
@@ -528,7 +509,7 @@
                         <img src="image/itempicture/item11.png" alt="">
                         <div class="bulid-button-name">
                             グラフィックボード
-                            <div class="bulid-button-suu" id="item11nedan">15000000000 しろくま</div>
+                            <div class="bulid-button-suu" id="item11nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item11havekazu">0</div>
@@ -538,7 +519,7 @@
                         <img src="image/itempicture/item12.png" alt="">
                         <div class="bulid-button-name">
                             原子合成機
-                            <div class="bulid-button-suu" id="item12nedan">160000000000 しろくま</div>
+                            <div class="bulid-button-suu" id="item12nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item12havekazu">0</div>
@@ -548,7 +529,7 @@
                         <img src="image/itempicture/item13.png" alt="">
                         <div class="bulid-button-name">
                             タイムマシン
-                            <div class="bulid-button-suu" id="item13nedan">1750000000000 しろくま</div>
+                            <div class="bulid-button-suu" id="item13nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item13havekazu">0</div>
@@ -558,7 +539,7 @@
                         <img src="image/itempicture/item14.png" alt="">
                         <div class="bulid-button-name">
                             JS Console
-                            <div class="bulid-button-suu" id="item14nedan">19000000000000 しろくま</div>
+                            <div class="bulid-button-suu" id="item14nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item14havekazu">0</div>
@@ -568,7 +549,7 @@
                         <img src="image/itempicture/item15.png" alt="">
                         <div class="bulid-button-name">
                             テッセラクト
-                            <div class="bulid-button-suu" id="item15nedan">21000000000000 しろくま</div>
+                            <div class="bulid-button-suu" id="item15nedan">0 しろくま</div>
                         </div>
                     </div>   
                     <div class="bulid-button-havekazu" id="item15havekazu">0</div>
@@ -5306,5 +5287,7 @@
         }
         
     </script>
+
+    <script id="customJS_tekiyou"></script>
 </body>
 </html>

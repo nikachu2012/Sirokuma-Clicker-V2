@@ -77,16 +77,33 @@ function dataSave(){
 
     localStorage.setItem('shopname', shopname)
 
-    return('データをLocalStorageに保存しました。')
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+    toastr["success"]("セーブしました")
 
-    toastr.info('セーブしました');
+    return('データをLocalStorageに保存しました。')
 
 
     // localStorage.setItem('sirokumaSuu', sirokumaSuu)
 
 }
 
-function dataLoad(){
+function dataLoad(syudou){
     sirokumaSuu = localStorage.getItem('sirokumaSuu')
     sirokumaSuuRuikei = localStorage.getItem('sirokumaSuuRuikei')
     sirokumaSuuRuikeiHerasu = localStorage.getItem('sirokumaSuuRuikeiHerasu')
@@ -301,6 +318,28 @@ function dataLoad(){
     }
     //　sirokumaSuu = localStorage.getItem('sirokumaSuu')
 
+    x1push();
+
+    if(syudou == 1){
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        toastr["success"]("ロードしました")
+    }
     return('データをLocalStorageから読みだしました。')
 }
 

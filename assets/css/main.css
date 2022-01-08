@@ -46,7 +46,7 @@ body {
     height: calc(100% - 22px);
     height: -webkit-calc(100% - 22px);
     
-    width: 340px;
+    width: 440px;
     border: solid;
     border-color: black;
     border-width: 1px;
@@ -114,20 +114,20 @@ body {
     height: calc(100% - 22px);
     height: -webkit-calc(100% - 22px);
     
-    width: calc(100% - 340px - 340px);
+    width: calc(100% - 340px - 440px);
     border: solid;
     border-color: black;
     border-width: 1px;
     box-sizing: border-box;
 
     position: absolute;
-    left: 340px;
+    left: 440px;
 }
 
 
 
 .centerSpace-headMenu{
-    height: 15%;
+    height: 140px;
 
     border: solid;
     border-color: black;
@@ -136,45 +136,48 @@ body {
 }
 
 .headmenu-container {
-    display: grid;
-    grid-template-columns: 10% 10% 60% 10% 10%;
-    grid-template-rows: 50% 50%;
-    grid-auto-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "button1 button1 button-text button3 button3"
-      "button2 button5 button-text button4 button4";
-    width: 100%;
-    height: 100%;
+    display: flex;
 
     user-select: none;
   }
-  
+
+.headmenu-container-left{
+    width: 200px;
+}
 .button1 {
-    grid-area: button1;
+    width: 200px;
+    height: 70px;
 }
   
 .button2 {
-    grid-area: button2;
-}
-  
-.button-text {
-    grid-area: button-text;
-}
-  
-.button3 {
-    grid-area: button3;
-}
-  
-.button4 {
-    grid-area: button4;
+    width: 80px;
+    height: 70px;
 }
 
 .button5 {
-    grid-area: button5;
+    width: 120px;
+    height: 70px;
 }
+
+.button-text {
+    width: calc(100% - 400px);
+    height: 140px;
+}
+
+.headmenu-container-right{
+    width: 200px;
+}
+
+.button3 {
+    width: 200px;
+    height: 70px;
+}
+  
+.button4 {
+    width: 200px;
+    height: 70px;
+}
+
 
 .clickerw-container-style{
     border: solid;
@@ -182,11 +185,9 @@ body {
     border-width: 1px;
     box-sizing: border-box;
 
-    font-size: 2vh;
+    font-size: larger;
     position: relative;
-    background-color:SaddleBrown;
     color: white;
-    box-shadow: inset 0 10px 25px 0 rgba(0, 0, 0, .5);
 
     background: linear-gradient(#0D0 0%, #008100 50%, #005B00 51%, #003900 100%);
     border: solid 1px #003900;
@@ -221,7 +222,7 @@ body {
 }
 .clickerw-centerContents{
     width: 100%;
-    height: calc(100% - 24px - 15%);
+    height: calc(100% - 24px - 140px);
     
 }
 
@@ -274,6 +275,19 @@ body {
 .centerContents-contents{
     margin-top: 10px;
     margin-left: 30px;
+    position: relative;
+}
+/*=============================================
+  バツボタン
+  =============================================*/
+.tojiruButton{
+    position: absolute;
+    right: 20px;
+    top: 140px;
+    cursor: pointer;
+}
+.tojiruButton:hover{
+    opacity: .6;
 }
 /*=============================================
   右側スペース（アップグレード）

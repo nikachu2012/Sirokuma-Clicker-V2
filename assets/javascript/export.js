@@ -4,7 +4,7 @@ function dataExport(){
     
     exportbuffer2 = ', "item15nedan": ' + item15nedan+ ', "item1kosuu": ' + item1kosuu + ', "item2kosuu": ' + item2kosuu + ', "item3kosuu": ' + item3kosuu + ', "item4kosuu": ' + item4kosuu + ', "item5kosuu": ' + item5kosuu + ', "item6kosuu": ' + item6kosuu + ', "item7kosuu": ' + item7kosuu + ', "item8kosuu": ' + item8kosuu + ', "item9kosuu": ' + item9kosuu + ', "item10kosuu": ' + item10kosuu + ', "item11kosuu": ' + item11kosuu + ', "item12kosuu": ' + item12kosuu + ', "item13kosuu": ' + item13kosuu + ', "item14kosuu": ' + item14kosuu + ', "item15kosuu": ' + item15kosuu+ ', "item1bairitu": ' + item1bairitu + ', "item2bairitu": ' + item2bairitu + ', "item3bairitu": ' + item3bairitu + ', "item4bairitu": ' + item4bairitu + ', "item5bairitu": ' + item5bairitu + ', "item6bairitu": ' + item6bairitu + ', "item7bairitu": ' + item7bairitu + ', "item8bairitu": ' + item8bairitu + ', "item9bairitu": ' + item9bairitu + ', "item10bairitu": ' + item10bairitu + ', "item11bairitu": ' + item11bairitu + ', "item12bairitu": ' + item12bairitu + ', "item13bairitu": ' + item13bairitu + ', "item14bairitu": ' + item14bairitu + ', "item15bairitu": ' + item15bairitu;
     
-    exportbuffer3 = ', "shopname": ' + shopname + '}'
+    exportbuffer3 = ', "shopname": "' + shopname + '"}'
 
     exportbufferfinal = exportbuffer + exportbuffer2 + exportbuffer3;
     exportBASE64 = window.btoa(exportbufferfinal);
