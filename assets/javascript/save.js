@@ -1,198 +1,100 @@
-function dataSave(){
-    localStorage.setItem('sirokumaSuu', sirokumaSuu)
-    localStorage.setItem('sirokumaSuuRuikei', sirokumaSuuRuikei)
-    localStorage.setItem('sirokumaSuuRuikeiHerasu', sirokumaSuuRuikeiHerasu)
+function dataExport(){
 
-    localStorage.setItem('waribiki', waribiki)
-    localStorage.setItem('sirokumaOneClick', sirokumaOneClick)
+    exportbuffer = '{"sirokumaSuu": ' + sirokumaSuu + ', "sirokumaSuuRuikei": ' + sirokumaSuuRuikei + ', "sirokumaSuuRuikeiHerasu": ' + sirokumaSuuRuikeiHerasu + ', "waribiki": ' + waribiki + ', "sirokumaOneClick": ' + sirokumaOneClick+ ', "skill1kakutoku": ' + skill1kakutoku+ ', "skill2kakutoku": ' + skill2kakutoku+ ', "skill3kakutoku": ' + skill3kakutoku+ ', "skill4kakutoku": ' + skill4kakutoku+ ', "skill5kakutoku": ' + skill5kakutoku+ ', "skill6kakutoku": ' + skill6kakutoku+ ', "skill7kakutoku": ' + skill7kakutoku+ ', "skill8kakutoku": ' + skill8kakutoku+ ', "skill9kakutoku": ' + skill9kakutoku + ', "skill10kakutoku": ' + skill10kakutoku+ ', "skill11kakutoku": ' + skill11kakutoku+ ', "skill12kakutoku": ' + skill12kakutoku+ ', "skill13kakutoku": ' + skill13kakutoku+ ', "skill14kakutoku": ' + skill14kakutoku + ', "skill15kakutoku": ' + skill15kakutoku + ', "item1nedan": ' + item1nedan + ', "item2nedan": ' + item2nedan + ', "item3nedan": ' + item3nedan + ', "item4nedan": ' + item4nedan + ',"item5nedan": ' + item5nedan + ', "item6nedan": ' + item6nedan + ', "item7nedan": ' + item7nedan + ', "item8nedan": ' + item8nedan + ', "item9nedan": ' + item9nedan + ', "item10nedan": ' + item10nedan + ', "item11nedan": ' + item11nedan + ', "item12nedan": ' + item12nedan + ', "item13nedan": ' + item13nedan + ', "item14nedan": ' + item14nedan;
+    
+    exportbuffer2 = ', "item15nedan": ' + item15nedan+ ', "item1kosuu": ' + item1kosuu + ', "item2kosuu": ' + item2kosuu + ', "item3kosuu": ' + item3kosuu + ', "item4kosuu": ' + item4kosuu + ', "item5kosuu": ' + item5kosuu + ', "item6kosuu": ' + item6kosuu + ', "item7kosuu": ' + item7kosuu + ', "item8kosuu": ' + item8kosuu + ', "item9kosuu": ' + item9kosuu + ', "item10kosuu": ' + item10kosuu + ', "item11kosuu": ' + item11kosuu + ', "item12kosuu": ' + item12kosuu + ', "item13kosuu": ' + item13kosuu + ', "item14kosuu": ' + item14kosuu + ', "item15kosuu": ' + item15kosuu+ ', "item1bairitu": ' + item1bairitu + ', "item2bairitu": ' + item2bairitu + ', "item3bairitu": ' + item3bairitu + ', "item4bairitu": ' + item4bairitu + ', "item5bairitu": ' + item5bairitu + ', "item6bairitu": ' + item6bairitu + ', "item7bairitu": ' + item7bairitu + ', "item8bairitu": ' + item8bairitu + ', "item9bairitu": ' + item9bairitu + ', "item10bairitu": ' + item10bairitu + ', "item11bairitu": ' + item11bairitu + ', "item12bairitu": ' + item12bairitu + ', "item13bairitu": ' + item13bairitu + ', "item14bairitu": ' + item14bairitu + ', "item15bairitu": ' + item15bairitu;
+    
+    exportbuffer3 = ', "shopname": "' + shopname + '"}'
 
-    localStorage.setItem('skill1kakutoku', skill1kakutoku)
-    localStorage.setItem('skill2kakutoku', skill2kakutoku)
-    localStorage.setItem('skill3kakutoku', skill3kakutoku)
-    localStorage.setItem('skill4kakutoku', skill4kakutoku)
-    localStorage.setItem('skill5kakutoku', skill5kakutoku)
-    localStorage.setItem('skill6kakutoku', skill6kakutoku)
-    localStorage.setItem('skill7kakutoku', skill7kakutoku)
-    localStorage.setItem('skill8kakutoku', skill8kakutoku)
-    localStorage.setItem('skill9kakutoku', skill9kakutoku)
-    localStorage.setItem('skill10kakutoku', skill10kakutoku)
-    localStorage.setItem('skill11kakutoku', skill11kakutoku)
-    localStorage.setItem('skill12kakutoku', skill12kakutoku)
-    localStorage.setItem('skill13kakutoku', skill13kakutoku)
-    localStorage.setItem('skill14kakutoku', skill14kakutoku)
-    localStorage.setItem('skill15kakutoku', skill15kakutoku)
+    exportbufferfinal = exportbuffer + exportbuffer2 + exportbuffer3;
+    exportBASE64 = window.btoa(exportbufferfinal);
+    // console.log(exportBASE64) <=DEBUG
 
-    localStorage.setItem('item1nedan', item1nedan)
-    localStorage.setItem('item2nedan', item2nedan)
-    localStorage.setItem('item3nedan', item3nedan)
-    localStorage.setItem('item4nedan', item4nedan)
-    localStorage.setItem('item5nedan', item5nedan)
-    localStorage.setItem('item6nedan', item6nedan)
-    localStorage.setItem('item7nedan', item7nedan)
-    localStorage.setItem('item8nedan', item8nedan)
-    localStorage.setItem('item9nedan', item9nedan)
-    localStorage.setItem('item10nedan', item10nedan)
-    localStorage.setItem('item11nedan', item11nedan)
-    localStorage.setItem('item12nedan', item12nedan)
-    localStorage.setItem('item13nedan', item13nedan)
-    localStorage.setItem('item14nedan', item14nedan)
-    localStorage.setItem('item15nedan', item15nedan)
-
-
-    localStorage.setItem('item1kosuu', item1kosuu)
-    localStorage.setItem('item2kosuu', item2kosuu)
-    localStorage.setItem('item3kosuu', item3kosuu)
-    localStorage.setItem('item4kosuu', item4kosuu)
-    localStorage.setItem('item5kosuu', item5kosuu)
-    localStorage.setItem('item6kosuu', item6kosuu)
-    localStorage.setItem('item7kosuu', item7kosuu)
-    localStorage.setItem('item8kosuu', item8kosuu)
-    localStorage.setItem('item9kosuu', item9kosuu)
-    localStorage.setItem('item10kosuu', item10kosuu)
-    localStorage.setItem('item11kosuu', item11kosuu)
-    localStorage.setItem('item12kosuu', item12kosuu)
-    localStorage.setItem('item13kosuu', item13kosuu)
-    localStorage.setItem('item14kosuu', item14kosuu)
-    localStorage.setItem('item15kosuu', item15kosuu)
-
-    localStorage.setItem('item1bairitu', item1bairitu)
-    localStorage.setItem('item2bairitu', item2bairitu)
-    localStorage.setItem('item3bairitu', item3bairitu)
-    localStorage.setItem('item4bairitu', item4bairitu)
-    localStorage.setItem('item5bairitu', item5bairitu)
-    localStorage.setItem('item6bairitu', item6bairitu)
-    localStorage.setItem('item7bairitu', item7bairitu)
-    localStorage.setItem('item8bairitu', item8bairitu)
-    localStorage.setItem('item9bairitu', item9bairitu)
-    localStorage.setItem('item10bairitu', item10bairitu)
-    localStorage.setItem('item11bairitu', item11bairitu)
-    localStorage.setItem('item12bairitu', item12bairitu)
-    localStorage.setItem('item13bairitu', item13bairitu)
-    localStorage.setItem('item14bairitu', item14bairitu)
-    localStorage.setItem('item15bairitu', item15bairitu)
-
-    localStorage.setItem('bairitu', bairitu)
-
-    localStorage.setItem('sirokumaOneClick', sirokumaOneClick)
-
-    localStorage.setItem('shopname', shopname)
-
-    toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": false,
-        "positionClass": "toast-bottom-center",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "5000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    }
-    toastr["success"]("セーブしました")
-
-    return('データをLocalStorageに保存しました。')
-
-
-    // localStorage.setItem('sirokumaSuu', sirokumaSuu)
-
+    return(exportBASE64)
 }
 
-function dataLoad(syudou){
-    sirokumaSuu = localStorage.getItem('sirokumaSuu')
-    sirokumaSuuRuikei = localStorage.getItem('sirokumaSuuRuikei')
-    sirokumaSuuRuikeiHerasu = localStorage.getItem('sirokumaSuuRuikeiHerasu')
 
-    waribiki = localStorage.getItem('waribiki')
-    sirokumaOneClick = localStorage.getItem('sirokumaOneClick')
-
-    skill1kakutoku = localStorage.getItem('skill1kakutoku')
-    skill2kakutoku = localStorage.getItem('skill2kakutoku')
-    skill3kakutoku = localStorage.getItem('skill3kakutoku')
-    skill4kakutoku = localStorage.getItem('skill4kakutoku')
-    skill5kakutoku = localStorage.getItem('skill5kakutoku')
-    skill6kakutoku = localStorage.getItem('skill6kakutoku')
-    skill7kakutoku = localStorage.getItem('skill7kakutoku')
-    skill8kakutoku = localStorage.getItem('skill8kakutoku')
-    skill9kakutoku = localStorage.getItem('skill9kakutoku')
-    skill10kakutoku = localStorage.getItem('skill10kakutoku')
-    skill11kakutoku = localStorage.getItem('skill11kakutoku')
-    skill12kakutoku = localStorage.getItem('skill12kakutoku')
-    skill13kakutoku = localStorage.getItem('skill13kakutoku')
-    skill14kakutoku = localStorage.getItem('skill14kakutoku')
-    skill15kakutoku = localStorage.getItem('skill15kakutoku')
-
-    item1nedan = localStorage.getItem('item1nedan')
-    item1kosuu = localStorage.getItem('item1kosuu')
-    item1bairitu = localStorage.getItem('item1bairitu')
-
-    item2nedan = localStorage.getItem('item2nedan')
-    item2kosuu = localStorage.getItem('item2kosuu')
-    item2bairitu = localStorage.getItem('item2bairitu')
-
-    item3nedan = localStorage.getItem('item3nedan')
-    item3kosuu = localStorage.getItem('item3kosuu')
-    item3bairitu = localStorage.getItem('item3bairitu')
-
-    item4nedan = localStorage.getItem('item4nedan')
-    item4kosuu = localStorage.getItem('item4kosuu')
-    item4bairitu = localStorage.getItem('item4bairitu')
-
-    item5nedan = localStorage.getItem('item5nedan')
-    item5kosuu = localStorage.getItem('item5kosuu')
-    item5bairitu = localStorage.getItem('item5bairitu')
-
-    item6nedan = localStorage.getItem('item6nedan')
-    item6kosuu = localStorage.getItem('item6kosuu')
-    item6bairitu = localStorage.getItem('item6bairitu')
-
-    item7nedan = localStorage.getItem('item7nedan')
-    item7kosuu = localStorage.getItem('item7kosuu')
-    item7bairitu = localStorage.getItem('item7bairitu')
-
-    item8nedan = localStorage.getItem('item8nedan')
-    item8kosuu = localStorage.getItem('item8kosuu')
-    item8bairitu = localStorage.getItem('item8bairitu')
-
-    item9nedan = localStorage.getItem('item9nedan')
-    item9kosuu = localStorage.getItem('item9kosuu')
-    item9bairitu = localStorage.getItem('item9bairitu')
-
-    item10nedan = localStorage.getItem('item10nedan')
-    item10kosuu = localStorage.getItem('item10kosuu')
-    item10bairitu = localStorage.getItem('item10bairitu')
-
-    item11nedan = localStorage.getItem('item11nedan')
-    item11kosuu = localStorage.getItem('item11kosuu')
-    item11bairitu = localStorage.getItem('item11bairitu')
-
-    item12nedan = localStorage.getItem('item12nedan')
-    item12kosuu = localStorage.getItem('item12kosuu')
-    item12bairitu = localStorage.getItem('item12bairitu')
-
-    item13nedan = localStorage.getItem('item13nedan')
-    item13kosuu = localStorage.getItem('item13kosuu')
-    item13bairitu = localStorage.getItem('item13bairitu')
-
-    item14nedan = localStorage.getItem('item14nedan')
-    item14kosuu = localStorage.getItem('item14kosuu')
-    item14bairitu = localStorage.getItem('item14bairitu')
-
-    item15nedan = localStorage.getItem('item15nedan')
-    item15kosuu = localStorage.getItem('item15kosuu')
-    item15bairitu = localStorage.getItem('item15bairitu')
-    
-    sirokumaOneClick = localStorage.getItem('sirokumaOneClick')
-    bairitu = localStorage.getItem('bairitu')
-    shopname = localStorage.getItem('shopname')
+function dataImport(ImportData){
+    loadBASE64 = window.atob(ImportData)
+    jsonObject = JSON.parse(loadBASE64);
+    console.log(jsonObject)
 
     
-    
+    sirokumaSuu = jsonObject.sirokumaSuu;
+    sirokumaSuuRuikei = jsonObject.sirokumaSuuRuikei;
+    sirokumaSuuRuikeiHerasu = jsonObject.sirokumaSuuRuikeiHerasu;
+
+    waribiki = jsonObject.waribiki;
+    sirokumaOneClick = jsonObject.sirokumaOneClick;
+
+    skill1kakutoku = jsonObject.skill1kakutoku;
+    skill2kakutoku = jsonObject.skill2kakutoku;
+    skill3kakutoku = jsonObject.skill3kakutoku;
+    skill4kakutoku = jsonObject.skill4kakutoku;
+    skill5kakutoku = jsonObject.skill5kakutoku;
+    skill6kakutoku = jsonObject.skill6kakutoku;
+    skill7kakutoku = jsonObject.skill7kakutoku;
+    skill8kakutoku = jsonObject.skill8kakutoku;
+    skill9kakutoku = jsonObject.skill9kakutoku;
+    skill10kakutoku = jsonObject.skill10kakutoku;
+    skill11kakutoku = jsonObject.skill11kakutoku;
+    skill12kakutoku = jsonObject.skill12kakutoku;
+    skill13kakutoku = jsonObject.skill13kakutoku;
+    skill14kakutoku = jsonObject.skill14kakutoku;
+    skill15kakutoku = jsonObject.skill15kakutoku;
+
+    item1kosuu = jsonObject.item1kosuu;
+    item2kosuu = jsonObject.item2kosuu;
+    item3kosuu = jsonObject.item3kosuu;
+    item4kosuu = jsonObject.item4kosuu;
+    item5kosuu = jsonObject.item5kosuu;
+    item6kosuu = jsonObject.item6kosuu;
+    item7kosuu = jsonObject.item7kosuu;
+    item8kosuu = jsonObject.item8kosuu;
+    item9kosuu = jsonObject.item9kosuu;
+    item10kosuu = jsonObject.item10kosuu;
+    item11kosuu = jsonObject.item11kosuu;
+    item12kosuu = jsonObject.item12kosuu;
+    item13kosuu = jsonObject.item13kosuu;
+    item14kosuu = jsonObject.item14kosuu;
+    item15kosuu = jsonObject.item15kosuu;
+
+
+    item1nedan = jsonObject.item1nedan;
+    item2nedan = jsonObject.item2nedan;
+    item3nedan = jsonObject.item3nedan;
+    item4nedan = jsonObject.item4nedan;
+    item5nedan = jsonObject.item5nedan;
+    item6nedan = jsonObject.item6nedan;
+    item7nedan = jsonObject.item7nedan;
+    item8nedan = jsonObject.item8nedan;
+    item9nedan = jsonObject.item9nedan;
+    item10nedan = jsonObject.item10nedan;
+    item11nedan = jsonObject.item11nedan;
+    item12nedan = jsonObject.item12nedan;
+    item13nedan = jsonObject.item13nedan;
+    item14nedan = jsonObject.item14nedan;
+    item15nedan = jsonObject.item15nedan;
+
+    item1bairitu = jsonObject.item1bairitu;
+    item2bairitu = jsonObject.item2bairitu;
+    item3bairitu = jsonObject.item3bairitu;
+    item4bairitu = jsonObject.item4bairitu;
+    item5bairitu = jsonObject.item5bairitu;
+    item6bairitu = jsonObject.item6bairitu;
+    item7bairitu = jsonObject.item7bairitu;
+    item8bairitu = jsonObject.item8bairitu;
+    item9bairitu = jsonObject.item9bairitu;
+    item10bairitu = jsonObject.item10bairitu;
+    item11bairitu = jsonObject.item11bairitu;
+    item12bairitu = jsonObject.item12bairitu;
+    item13bairitu = jsonObject.item13bairitu;
+    item14bairitu = jsonObject.item14bairitu;
+    item15bairitu = jsonObject.item15bairitu;
+
+    shopname = jsonObject.shopname;
+
+
     // 文字列を数字に変換
     sirokumaSuu = Number(sirokumaSuu)
     sirokumaSuuRuikei = Number(sirokumaSuuRuikei)
@@ -263,13 +165,8 @@ function dataLoad(syudou){
     item15kosuu = Number(item15kosuu)
     item15bairitu = Number(item15bairitu)
 
-    bairitu = Number(bairitu)
-
-    sirokumaOneClick = Number(sirokumaOneClick)
     
-    updateHyouji();
-    itemAllLoad();
-    changeShopUpdate();
+    
 
     if (skill15kakutoku == 1) {
         document.getElementById('skill15kakutokuDesc').innerHTML = "獲得済み";
@@ -318,29 +215,42 @@ function dataLoad(syudou){
     }
     //　sirokumaSuu = localStorage.getItem('sirokumaSuu')
 
+    updateHyouji();
+    itemAllLoad();
+
     x1push();
 
-    if(syudou == 1){
-        toastr.options = {
-            "closeButton": true,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": false,
-            "positionClass": "toast-bottom-center",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        }
-        toastr["success"]("ロードしました")
+    return('データをセーブファイルから読みだしました。')
+
+}
+
+
+function dataSave(){
+    localStorage.setItem('SaveData', dataExport())
+
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
     }
-    return('データをLocalStorageから読みだしました。')
+    toastr["success"]("セーブしました")
+}
+
+function dataLoad(){
+    SaveData = localStorage.getItem('SaveData')
+    dataImport(SaveData);
 }
 
 function dataRemove(){
@@ -355,6 +265,4 @@ function dataRemove(){
 
 }
 
-setInterval(() => {
-    dataSave();
-}, 10000);
+
