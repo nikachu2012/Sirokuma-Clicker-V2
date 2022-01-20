@@ -11,4 +11,6 @@ clicker_bulid = "21030";
 
     document.getElementById('clickerw-title-version').innerHTML = '<span class="clickerw-title-version" onclick="showBulidNumber();">version ' + clicker_version + '<span>';
     changeShopShoki();
+    
+
 }());

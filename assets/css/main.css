@@ -114,28 +114,29 @@ body {
     text-shadow: 1px 0 5px #FFF;
 }
 
+
 /*=============================================
   真ん中のスペース
   =============================================*/
 
-.clickerw-centerSpace{
+  .clickerw-centerSpace{
     height: calc(100% - 22px);
     height: -webkit-calc(100% - 22px);
     
-    width: calc(100% - 340px - 440px);
+    width: calc(100% - 440px - 340px);
     border: solid;
     border-color: black;
     border-width: 1px;
     box-sizing: border-box;
 
     position: absolute;
-    left: 440px;
+    left:440px;
 }
 
 
 
 .centerSpace-headMenu{
-    height: 140px;
+    height: 15%;
 
     border: solid;
     border-color: black;
@@ -144,46 +145,40 @@ body {
 }
 
 .headmenu-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 10% 10% 60% 10% 10%;
+    grid-template-rows: 50% 50%;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "button1 button1 button-text button3 button3"
+      "button2 button2 button-text button4 button4";
+    width: 100%;
+    height: 100%;
 
     user-select: none;
   }
-
-.headmenu-container-left{
-    width: 200px;
-}
+  
 .button1 {
-    width: 200px;
-    height: 70px;
+    grid-area: button1;
 }
   
 .button2 {
-    width: 80px;
-    height: 70px;
+    grid-area: button2;
 }
-
-.button5 {
-    width: 120px;
-    height: 70px;
-}
-
+  
 .button-text {
-    width: calc(100% - 400px);
-    height: 140px;
+    grid-area: button-text;
 }
-
-.headmenu-container-right{
-    width: 200px;
-}
-
+  
 .button3 {
-    width: 200px;
-    height: 70px;
+    grid-area: button3;
 }
   
 .button4 {
-    width: 200px;
-    height: 70px;
+    grid-area: button4;
 }
 
 
@@ -193,9 +188,11 @@ body {
     border-width: 1px;
     box-sizing: border-box;
 
-    font-size: larger;
+    font-size: 2vh;
     position: relative;
+    background-color:SaddleBrown;
     color: white;
+    box-shadow: inset 0 10px 25px 0 rgba(0, 0, 0, .5);
 
     background: linear-gradient(#0D0 0%, #008100 50%, #005B00 51%, #003900 100%);
     border: solid 1px #003900;
@@ -228,9 +225,10 @@ body {
     -webkit-transform: translateY(-50%) translateX(-50%);
     text-align: center;
 }
+
 .clickerw-centerContents{
     width: 100%;
-    height: calc(100% - 24px - 140px);
+    height: calc(100% - 21px - 140px);
     
 }
 
@@ -250,7 +248,6 @@ body {
 }
 
 .centerContents-titletext{
-    
     padding-left: 90px;
     padding-right: 90px;
 }
