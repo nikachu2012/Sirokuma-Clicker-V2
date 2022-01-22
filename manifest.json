@@ -1,0 +1,22 @@
+{
+  "name": "しろくまクリッカー",
+  "short_name": "sirClicker",
+  "description": "しろくまクリッカーです",
+
+  "icons": [
+    {
+      "src": "/image/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/image/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#4e342e"
+}
