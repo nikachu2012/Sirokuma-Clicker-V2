@@ -1133,6 +1133,8 @@
     </div>
 
 
+
+
     <script src="assets/web.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -1147,20 +1149,23 @@
 
     <script src="assets/javascript/FileSaver.js"></script>
 
-    <script src="assets/javascript/oldDataUpdate.js"></script>
-
     <script>
         pageFirstView = Number(localStorage.getItem('pageFirstView'));
         if(pageFirstView == 0){
             dataSave()
             dataLoad()
             localStorage.setItem('pageFirstView', 1)
+            localStorage.setItem('newData', 1)
         }
         else{
             dataLoad();
         }
         
     </script>
+
+    <script src="assets/javascript/oldDataUpdate.js"></script>
+
+    
     
 
     <script id="customJS_tekiyou"></script>

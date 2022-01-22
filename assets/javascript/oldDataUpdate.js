@@ -77,14 +77,16 @@ function sampleDataCreate(){
 
     localStorage.setItem('shopname', shopname)
 
+    localStorage.removeItem("newData");
+
     console.log('旧データのサンプルを書き込みました')
 }
 
 function dataUpdate(){
-    oldData = Number(localStorage.getItem('sirokumaSuu'))
 
-    if(oldData === undefined){}
-    else{
+        newdataDetect = Number(localStorage.getItem('newData'));
+        if(newdataDetect == 1){}
+        else{
             sirokumaSuu = localStorage.getItem('sirokumaSuu')
             sirokumaSuuRuikei = localStorage.getItem('sirokumaSuuRuikei')
             sirokumaSuuRuikeiHerasu = localStorage.getItem('sirokumaSuuRuikeiHerasu')
@@ -299,10 +301,10 @@ function dataUpdate(){
             }
 
             exportbuffer = '{"sirokumaSuu": ' + sirokumaSuu + ', "sirokumaSuuRuikei": ' + sirokumaSuuRuikei + ', "sirokumaSuuRuikeiHerasu": ' + sirokumaSuuRuikeiHerasu + ', "waribiki": ' + waribiki + ', "sirokumaOneClick": ' + sirokumaOneClick+ ', "skill1kakutoku": ' + skill1kakutoku+ ', "skill2kakutoku": ' + skill2kakutoku+ ', "skill3kakutoku": ' + skill3kakutoku+ ', "skill4kakutoku": ' + skill4kakutoku+ ', "skill5kakutoku": ' + skill5kakutoku+ ', "skill6kakutoku": ' + skill6kakutoku+ ', "skill7kakutoku": ' + skill7kakutoku+ ', "skill8kakutoku": ' + skill8kakutoku+ ', "skill9kakutoku": ' + skill9kakutoku + ', "skill10kakutoku": ' + skill10kakutoku+ ', "skill11kakutoku": ' + skill11kakutoku+ ', "skill12kakutoku": ' + skill12kakutoku+ ', "skill13kakutoku": ' + skill13kakutoku+ ', "skill14kakutoku": ' + skill14kakutoku + ', "skill15kakutoku": ' + skill15kakutoku + ', "item1nedan": ' + item1nedan + ', "item2nedan": ' + item2nedan + ', "item3nedan": ' + item3nedan + ', "item4nedan": ' + item4nedan + ',"item5nedan": ' + item5nedan + ', "item6nedan": ' + item6nedan + ', "item7nedan": ' + item7nedan + ', "item8nedan": ' + item8nedan + ', "item9nedan": ' + item9nedan + ', "item10nedan": ' + item10nedan + ', "item11nedan": ' + item11nedan + ', "item12nedan": ' + item12nedan + ', "item13nedan": ' + item13nedan + ', "item14nedan": ' + item14nedan;
-    
+
             exportbuffer2 = ', "item15nedan": ' + item15nedan+ ', "item1kosuu": ' + item1kosuu + ', "item2kosuu": ' + item2kosuu + ', "item3kosuu": ' + item3kosuu + ', "item4kosuu": ' + item4kosuu + ', "item5kosuu": ' + item5kosuu + ', "item6kosuu": ' + item6kosuu + ', "item7kosuu": ' + item7kosuu + ', "item8kosuu": ' + item8kosuu + ', "item9kosuu": ' + item9kosuu + ', "item10kosuu": ' + item10kosuu + ', "item11kosuu": ' + item11kosuu + ', "item12kosuu": ' + item12kosuu + ', "item13kosuu": ' + item13kosuu + ', "item14kosuu": ' + item14kosuu + ', "item15kosuu": ' + item15kosuu+ ', "item1bairitu": ' + item1bairitu + ', "item2bairitu": ' + item2bairitu + ', "item3bairitu": ' + item3bairitu + ', "item4bairitu": ' + item4bairitu + ', "item5bairitu": ' + item5bairitu + ', "item6bairitu": ' + item6bairitu + ', "item7bairitu": ' + item7bairitu + ', "item8bairitu": ' + item8bairitu + ', "item9bairitu": ' + item9bairitu + ', "item10bairitu": ' + item10bairitu + ', "item11bairitu": ' + item11bairitu + ', "item12bairitu": ' + item12bairitu + ', "item13bairitu": ' + item13bairitu + ', "item14bairitu": ' + item14bairitu + ', "item15bairitu": ' + item15bairitu;
             
-            exportbuffer3 = ', "shopname": ' + shopname + '}'
+            exportbuffer3 = ', "shopname": "' + shopname + '"}'
         
             exportbufferfinal = exportbuffer + exportbuffer2 + exportbuffer3;
 
@@ -311,6 +313,10 @@ function dataUpdate(){
 
             localStorage.clear();
 
+
+            localStorage.setItem('newData', 1)
             dataImport(exportBASE64);
         }
     }
+    
+    dataUpdate();

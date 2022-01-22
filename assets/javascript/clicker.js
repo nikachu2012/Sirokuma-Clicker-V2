@@ -1197,9 +1197,7 @@ function item_hyoujiUpdate() {
         var itemhyoujiBuffer = item12hyouji;
         for (i = 0; i < n; i++) {
             itemhyoujiBuffer = Math.ceil(itemhyoujiBuffer * bairitu * waribiki);
-            //console.log(itemhyoujiBuffer) <=DEBUG
             item12hyouji = item12hyouji + itemhyoujiBuffer;
-            //console.log("item1hyouji" + item1hyouji) <=DEBUG
         }
 
         document.getElementById('item12-sirokumacost').innerHTML = item12hyouji.toLocaleString() + '&nbsp;しろくま';
@@ -1259,9 +1257,7 @@ function item_hyoujiUpdate() {
         var itemhyoujiBuffer = item14hyouji;
         for (i = 0; i < n; i++) {
             itemhyoujiBuffer = Math.ceil(itemhyoujiBuffer * bairitu * waribiki);
-            //console.log(itemhyoujiBuffer) <=DEBUG
             item14hyouji = item14hyouji + itemhyoujiBuffer;
-            //console.log("item1hyouji" + item1hyouji) <=DEBUG
         }
 
         document.getElementById('item14-sirokumacost').innerHTML = item14hyouji.toLocaleString() + '&nbsp;しろくま';
