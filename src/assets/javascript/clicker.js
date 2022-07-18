@@ -1563,30 +1563,6 @@ function shopnameConfirm(){
 }
 
 // ==========================================
-// 悲しくなるプログラム 2020年
-// ==========================================
-
-const nikachu_2020_girlfriend = undefined
-const sirokuma_2020_girlfriend = 'have';
-const amudon_2020_girlfriend = undefined
-
-// ==========================================
-// 悲しくなるプログラム 2021年
-// ==========================================
-
-const nikachu_2021_girlfriend = undefined
-const sirokuma_2021_girlfriend = 'had'; //ざっこwwwwwwwwwwwwww by nikachu
-const amudon_2021_girlfriend = undefined
-
-// ==========================================
-// 悲しくなるプログラム リアルタイム
-// ==========================================
-
-var nikachu_latest_girlfriend = undefined
-const sirokuma_latest_girlfriend = 'had'; //ざっこwwwwwwwwwwwwww by nikachu
-var amudon_latest_girlfriend = undefined
-
-// ==========================================
 // エラープログラム
 // ==========================================
 
