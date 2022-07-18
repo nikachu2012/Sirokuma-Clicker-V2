@@ -2,7 +2,7 @@ sirokumaSuu = 0;
 sirokumaSuuRuikei = 0;
 sirokumaSuuRuikeiHerasu = 0;
 
-waribiki = 1
+waribiki = 1;
 
 sirokumaOneClick = 1;
 
