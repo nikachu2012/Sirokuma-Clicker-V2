@@ -1245,7 +1245,7 @@ function dataImport_ButtonB() {
         batuclick();
     }
 
-    
+
 }
 
 function dataExport_File() {
@@ -1304,18 +1304,18 @@ function changeShopName() {
     hyoujiDialog('ショップ名の変更', '全角半角どちらも12文字まで対応しています。<br><br><input value="ショップ名" maxlength="12" id="shopnameTextbox" style="width: calc(100% - 9px)">', '<button style="font-size: small;" onclick="shopnameConfirm();">決めた</button><button style="font-size: small;" onclick="batuclick();">やっぱいいや</button>')
 }
 
-function changeShopShoki(){
+function changeShopShoki() {
     shopname = 'polar bear';
     changeShopUpdate();
-    
+
 }
 
-function changeShopUpdate(){
+function changeShopUpdate() {
     document.getElementById('shopNameArea').innerHTML = shopname + '<br>しろくまショップ';
 }
 
 
-function shopnameConfirm(){
+function shopnameConfirm() {
     const textbox = document.getElementById("shopnameTextbox")
     shopname = textbox.value;
     document.getElementById('shopNameArea').innerHTML = shopname + '<br>しろくまショップ';
@@ -1326,8 +1326,8 @@ function shopnameConfirm(){
 // エラープログラム
 // ==========================================
 
-function error_critical(errorcode){
-    document.getElementById('index_body').innerHTML = 'Sirokuma-Clicker Version' + clicker_version + ' Bulid ' +  clicker_bulid +' <br>critical error.  Error Code' + errorcode + '<br><br>↓最終セーブデータ↓<br><span id="saveHyouji"></span>';
+function error_critical(errorcode) {
+    document.getElementById('index_body').innerHTML = 'Sirokuma-Clicker Version' + clicker_version + ' Bulid ' + clicker_bulid + ' <br>critical error.  Error Code' + errorcode + '<br><br>↓最終セーブデータ↓<br><span id="saveHyouji"></span>';
     document.getElementById('saveHyouji').innerHTML = '<textarea cols="10" rows="10">' + dataExport() + '</textarea>';
 }
 
@@ -1335,7 +1335,7 @@ function error_critical(errorcode){
 // カスタムCSS適用
 // ==========================================
 
-function customCSS_confirm(){
+function customCSS_confirm() {
     const customCSS = document.getElementById("customcss").value;
 
     document.getElementById("customCSS_tekiyou").textContent = '';
@@ -1362,7 +1362,7 @@ function customCSS_confirm(){
 }
 
 
-function customJS_confirm(){
+function customJS_confirm() {
     const customJS = document.getElementById("customjs").value;
 
     document.getElementById("customJS_tekiyou").textContent = '';
