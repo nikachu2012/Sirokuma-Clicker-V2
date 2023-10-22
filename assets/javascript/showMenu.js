@@ -17,21 +17,6 @@ function showSetting(){
                     <button onclick="dataRemove();">セーブを削除</button>&nbsp;&nbsp;<span style="color: red;"><i class="fas fa-exclamation-circle"></i>この操作をするとデータが削除されます。</span>
                 </div>
             </div>
-            <br>
-            <div class="contents_text"><span class="centerContents-head2">高度な設定</span></div>
-            <div class="centerContents-contents">
-                <span style="font-size: large;">カスタムCSS</span><br>
-                カスタムCSSは再読み込みすると適用されなくなります。<br>
-                <textarea id="customcss" style="width: 97%; height: 200px;"></textarea><br>
-                <button onclick="customCSS_confirm()">適用</button><br><br>
-            </div>
-
-            <div class="centerContents-contents">
-                <span style="font-size: large;">カスタムJavaScript</span><br>
-                カスタムJavaScriptは再読み込みすると適用されなくなります。<br>
-                <textarea id="customjs" style="width: 97%; height: 200px;"></textarea><br>
-                <button onclick="customJS_confirm()">適用</button>
-            </div>
         </div>
     </div>
     `
