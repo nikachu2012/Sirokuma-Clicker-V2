@@ -1,10 +1,10 @@
-sirokumaSuu = 0;
-sirokumaSuuRuikei = 0;
-sirokumaSuuRuikeiHerasu = 0;
+let sirokumaSuu = 0;
+let sirokumaSuuRuikei = 0;
+let sirokumaSuuRuikeiHerasu = 0;
 
-waribiki = 1;
+let waribiki = 1;
 
-sirokumaOneClick = 1;
+let sirokumaOneClick = 1;
 
 
 function fuyasuSirokuma(sirokumaKazu) {
