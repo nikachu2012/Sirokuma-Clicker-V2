@@ -1,5 +1,5 @@
 // バージョン指定
-clicker_version = "2.2.0.0";
+clicker_version = "2.2.0.1";
 
 
 (function () {
