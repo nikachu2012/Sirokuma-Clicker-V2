@@ -71,8 +71,11 @@ function dataImport(ImportData) {
 }
 
 
-function dataSave() {
+setInterval(() => {
+    dataSave()
+}, 10000);
 
+function dataSave() {
     try {
         localStorage.setItem('saveDataNew', dataExport())
 
