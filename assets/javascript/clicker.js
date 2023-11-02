@@ -67,8 +67,8 @@ let ratio = 1.15;
 function itembuy(id) {
     if (sirokumaSuu >= itemHyouji[id]) {
         herasuSirokuma(itemHyouji[id])
-        item1kosuu = itemcount[id] + buyKosuu;
-        item1nedan = itemHyouji[id];
+        itemcount[id] = itemcount[id] + buyKosuu;
+        itemcost[id] = itemHyouji[id];
         item_hyoujiUpdate();
 
         document.getElementById(`item${id + 1}havekazu`).innerHTML = item1kosuu.toLocaleString();
