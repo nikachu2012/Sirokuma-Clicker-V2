@@ -71,8 +71,8 @@ function itembuy(id) {
         itemcost[id] = itemHyouji[id];
         item_hyoujiUpdate();
 
-        document.getElementById(`item${id + 1}havekazu`).innerHTML = item1kosuu.toLocaleString();
-        document.getElementById(`item${id + 1}MotterukazuHyouji`).innerHTML = item1kosuu.toLocaleString() + '&nbsp;個';
+        document.getElementById(`item${id + 1}havekazu`).innerHTML = itemcount[id].toLocaleString();
+        document.getElementById(`item${id + 1}MotterukazuHyouji`).innerHTML = itemcount[id].toLocaleString() + '&nbsp;個';
     }
     else { alert('しろくま数が' + itemHyouji[id] + 'に達していません。しろくま数を貯めてください。') }
 }
