@@ -10,7 +10,7 @@ function dataExport() {
         "itcos": itemcost,
         "itcnt": itemcount,
         "itrat": itemRatio,
-        "sn": shopname
+        "sn": encodeURIComponent(shopname)
     }
 
     exportBASE64 = window.btoa(JSON.stringify(exportbuffer));
@@ -38,7 +38,7 @@ function dataImport(ImportData) {
         itemcost = jsonObject.itcos
         itemcount = jsonObject.itcnt
         itemRatio = jsonObject.itrat
-        shopname = jsonObject.sn;
+        shopname = decodeURIComponent(jsonObject.sn);
 
 
         for (let index = 0; index < 15; index++) {
