@@ -328,17 +328,16 @@ function dataExport_File() {
 let shopname = 'polar bear';
 
 function changeShopName() {
-    hyoujiDialog('ショップ名の変更', 'ショップ名を変更することができます。<br>長い名前や日本語を入れるとセーブデータのデータ量が増えます。<br><br><br><input value="ショップ名" id="shopnameTextbox" style="width: calc(100% - 9px)">', '<button style="font-size: small;" onclick="shopnameConfirm();">決めた</button><button style="font-size: small;" onclick="batuclick();">やっぱいいや</button>')
+    hyoujiDialog(
+        'ショップ名の変更',
+        `ショップ名を変更することができます。<br>長い名前や日本語を入れるとセーブデータのデータ量が増えます。<br><br><textarea id="shopnameTextbox" style="width: calc(100% - 9px); resize: none;height: 100px;">${shopname}</textarea>`,
+        '<button style="font-size: small;" onclick="shopnameConfirm();">決めた</button><button style="font-size: small;" onclick="batuclick();">やっぱいいや</button>')
 }
 
 function changeShopShoki() {
-    changeShopUpdate();
-}
-
-function changeShopUpdate() {
     document.getElementById('shopNameArea').textContent = shopname
-}
 
+}
 
 function shopnameConfirm() {
     const textbox = document.getElementById("shopnameTextbox")
