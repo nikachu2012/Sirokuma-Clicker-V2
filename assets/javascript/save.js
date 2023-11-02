@@ -38,7 +38,7 @@ function dataImport(ImportData) {
         itemcost = jsonObject.itcos
         itemcount = jsonObject.itcnt
         itemRatio = jsonObject.itrat
-        shopname = decodeURIComponent(jsonObject.sn).substring(0,12);
+        shopname = decodeURIComponent(jsonObject.sn);
 
 
         for (let index = 0; index < 15; index++) {

@@ -328,7 +328,7 @@ function dataExport_File() {
 let shopname = 'polar bear';
 
 function changeShopName() {
-    hyoujiDialog('ショップ名の変更', '全角半角どちらも12文字まで対応しています。<br><br><input value="ショップ名" maxlength="12" id="shopnameTextbox" style="width: calc(100% - 9px)">', '<button style="font-size: small;" onclick="shopnameConfirm();">決めた</button><button style="font-size: small;" onclick="batuclick();">やっぱいいや</button>')
+    hyoujiDialog('ショップ名の変更', 'ショップ名を変更することができます。<br>長い名前や日本語を入れるとセーブデータのデータ量が増えます。<br><br><br><input value="ショップ名" id="shopnameTextbox" style="width: calc(100% - 9px)">', '<button style="font-size: small;" onclick="shopnameConfirm();">決めた</button><button style="font-size: small;" onclick="batuclick();">やっぱいいや</button>')
 }
 
 function changeShopShoki() {
