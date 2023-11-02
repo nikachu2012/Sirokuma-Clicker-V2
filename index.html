@@ -41,7 +41,7 @@
     <div class="clickerw-gamebody">
 
         <div class="clickerw-clickSpace">
-            
+
             <div class="clickSpace-ShopNameHyouji" onclick="changeShopName();" id="shopNameArea">polar bear</div>
             <div class="clickSpace-SirokumaShopText" id="shopNameArea">しろくまショップ</div>
             <img src="image/sirokuma.webp" alt="" class="clickSpace-pictureSirokuma" onclick="clickSirokuma();">
@@ -60,12 +60,13 @@
                     <div class="button-text clickerw-container-style-textarea"><span class="container-text_transform" id="top-textarea">しろくまを作ろう</span></div>
                     <div onclick="showToukei();" class="button3 clickerw-container-style"><span class="container-text_transform">統計&実績<br>(未実装)</span></div>
                     <div onclick="showTensei();" class="button4 clickerw-container-style"><span class="container-text_transform">転生(未実装)</span></div>
-              </div>
             </div>
-
+            </div>
+            
             <div class="clickerw-centerContents" id="clickerw-centerContents">
-                <div class="centerContents-center">
-                    <div class="centerContents-title contents_text"><span class="centerContents-titletext">Information</span></div><br>                                                         
+                <div class="centerContents-center centerContents-information">
+                    <div class="centerContents-title contents_text"><span class="centerContents-titletext">Information</span></div>
+                    <br>
                     <div>
                         <div class="contents_text"><span class="centerContents-head2">しろくまクリッカーについて</span></div>
                         <div class="centerContents-contents">
@@ -79,7 +80,7 @@
                     </div>
                     <div>
                         <div class="contents_text"><span class="centerContents-head2">更新履歴</span></div><br>
-
+            
                         <div class="contents_text"><span class="centerContents-head3">2023/10/22 version2.2.0.0 release</span></div>
                         <div class="centerContents-contents">
                             「まだ更新はあります。」とか言ったくせに一切更新してませんでした。<br>
@@ -98,8 +99,8 @@
                             </ul>
                             2023.10.22 2:00 p.m. by nikachu<br><br>
                         </div>
-
-
+            
+            
                         <div class="contents_text"><span class="centerContents-head3">2022/01/22 version2.1.0.0 release</span></div>
                         <div class="centerContents-contents">
                             やっとここまでたどり着きました。ついにしろくまクリッカーV2完成です。<br>
@@ -112,7 +113,8 @@
                             2022.01.22 09:00 a.m. by nikachu<br><br>
                         </div>
             
-                        <div class="contents_text"><span class="centerContents-head3">2022/01/08 version2.1.0.0 Public Beta 3</span></div>
+                        <div class="contents_text"><span class="centerContents-head3">2022/01/08 version2.1.0.0 Public Beta 3</span>
+                        </div>
                         <div class="centerContents-contents">
                             <ul>
                                 <li>カスタムCSS利用機能の追加</li>
@@ -124,7 +126,9 @@
                             2022.01.08 23:27 p.m. by nikachu<br><br>
                         </div>
             
-                        <div class="contents_text"><span class="centerContents-head3">2022/01/04 version2.1.0.0 Public Beta 2.1</span></div>
+                        <div class="contents_text"><span class="centerContents-head3">2022/01/04 version2.1.0.0 Public Beta
+                                2.1</span>
+                        </div>
                         <div class="centerContents-contents">
                             <ul>
                                 <li>ポインターのスキルが正しく購入できない不具合を修正</li>
@@ -132,7 +136,8 @@
                             2021.01.04 12:50 p.m. by nikachu<br><br>
                         </div>
             
-                        <div class="contents_text"><span class="centerContents-head3">2021/12/25 version2.1.0.0 Public Beta 2</span></div>
+                        <div class="contents_text"><span class="centerContents-head3">2021/12/25 version2.1.0.0 Public Beta 2</span>
+                        </div>
                         <div class="centerContents-contents">
                             <ul>
                                 <li>ファイルでのセーブ機能の追加</li>
@@ -144,7 +149,8 @@
                         </div>
             
             
-                        <div class="contents_text"><span class="centerContents-head3">2021/12/18 version2.1.0.0 Public Beta 1</span></div>
+                        <div class="contents_text"><span class="centerContents-head3">2021/12/18 version2.1.0.0 Public Beta 1</span>
+                        </div>
                         <div class="centerContents-contents">
                             <ul>
                                 <li>初期版の公開</li>
@@ -156,10 +162,34 @@
             
                     </div>
                 </div>
+                <div class="centerContents-center centerContents-setting hidden">
+                    <div style="position: relative;">
+                        <div class="tojiruButton" onclick="showSetting()"><i class="fas fa-times"
+                                style="color: white; font-size:x-large;"></i></div>
+                        <div class="centerContents-title contents_text"><span class="centerContents-titletext">設定</span></div><br>
+                        <div>
+                            <div class="contents_text"><span class="centerContents-head2">一般設定</span></div>
+                            <div class="centerContents-contents">
+                                <button onclick="dataSave();">今すぐセーブ</button>&nbsp;&nbsp;<i
+                                    class="fas fa-info-circle"></i>今すぐセーブができます。<br>
+                                <button onclick="dataExport_button();">セーブを書き出し</button>&nbsp;<button
+                                    onclick="dataImport_button();">セーブの読み込み</button>&nbsp;&nbsp;<i
+                                    class="fas fa-info-circle"></i>セーブの書き出しと読み込みができます。<br>
+                                <button onclick="dataExport_File();">セーブをファイルで保存</button>&nbsp;<button
+                                    onclick="dataImport_file();">ファイルからセーブを読み込み</button><br>
+                                <div style="border: 1px solid red; margin-top: 5px; padding: 5px 5px 5px 5px;">
+                                    <span style="color: red;">=== 危険 ===</span>
+                                    <button onclick="dataRemove();">セーブを削除</button>&nbsp;&nbsp;<span style="color: red;"><i
+                                            class="fas fa-exclamation-circle"></i>この操作をするとデータが削除されます。</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="clickerw-upgradeSpace">
+            </div>
+            
+            <div class="clickerw-upgradeSpace">
             <div class="skill-buliding-title">
                 <b style="padding-top: 2px;"> スキル</b>
             </div>

@@ -241,6 +241,7 @@ body {
     width: 100%;
     height: calc(100% - 15%);
 
+    position:relative;
 }
 
 .centerContents-title {
@@ -274,7 +275,8 @@ body {
     background-repeat: repeat;
 
     overflow-y: scroll;
-
+    width: 100%;
+    position: absolute;
 }
 
 .centerContents-head2 {
@@ -301,7 +303,7 @@ body {
 .tojiruButton {
     position: absolute;
     right: 20px;
-    top: 140px;
+    top: 10px;
     cursor: pointer;
 }
 
@@ -718,4 +720,8 @@ body {
     -webkit-transform: translateX(-50%);
 
     bottom: 5px;
+}
+
+.hidden{
+    visibility: hidden;
 }
