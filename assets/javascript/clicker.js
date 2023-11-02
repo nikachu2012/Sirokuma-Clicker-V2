@@ -41,14 +41,19 @@ const skillBonus = [10, 50, 100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 
 
 function skillClick(skillID) {
     if (skillKakutoku[skillID] == 1) { alert("すでに獲得しています") } else {
-        if (sirokumaSuu >= skillcost[skillID]) {
-            herasuSirokuma(skillcost[skillID]);//コスト分しろくま数からひく
-            sirokumaOneClick = skillBonus[skillID]; // しろくまが１クリックで増える量調整 
-            skillKakutoku[skillID] = 1; // 獲得変数に１
+        if (skillKakutoku[skillID - 1] == 1) {
+            if (sirokumaSuu >= skillcost[skillID]) {
+                herasuSirokuma(skillcost[skillID]);//コスト分しろくま数からひく
+                sirokumaOneClick = skillBonus[skillID]; // しろくまが１クリックで増える量調整 
+                skillKakutoku[skillID] = 1; // 獲得変数に１
 
-            document.getElementById(`skill${skillID + 1}kakutokuDesc`).innerHTML = "獲得済み"; //説明を獲得済みに変更
+                document.getElementById(`skill${skillID + 1}kakutokuDesc`).innerHTML = "獲得済み"; //説明を獲得済みに変更
+            }
+            else { alert("しろくま数が" + skillcost[skillID] + "に達していません。しろくま数を貯めてください。") }
         }
-        else { alert("しろくま数が" + skillcost[skillID] + "に達していません。しろくま数を貯めてください。") }
+        else {
+            alert("前のスキルを先に獲得してください。")
+        }
     }
 }
 
