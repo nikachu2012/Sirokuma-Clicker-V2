@@ -325,12 +325,13 @@ function dataExport_File() {
 // ショップ名変更プログラム
 // ===========================================
 
+let shopname = 'polar bear';
+
 function changeShopName() {
     hyoujiDialog('ショップ名の変更', '全角半角どちらも12文字まで対応しています。<br><br><input value="ショップ名" maxlength="12" id="shopnameTextbox" style="width: calc(100% - 9px)">', '<button style="font-size: small;" onclick="shopnameConfirm();">決めた</button><button style="font-size: small;" onclick="batuclick();">やっぱいいや</button>')
 }
 
 function changeShopShoki() {
-    shopname = 'polar bear';
     changeShopUpdate();
 }
 
@@ -341,7 +342,7 @@ function changeShopUpdate() {
 
 function shopnameConfirm() {
     const textbox = document.getElementById("shopnameTextbox")
-    shopname = textbox.value;
+    shopname = escapeHtml(textbox.value);
     document.getElementById('shopNameArea').innerHTML = shopname + '<br>しろくまショップ';
     batuclick();
 }
@@ -354,3 +355,26 @@ function error_critical(errorcode) {
     document.getElementById('index_body').innerHTML = 'Sirokuma-Clicker Version' + clicker_version + '<br>critical error.  Error Code' + errorcode + '<br><br>↓最終セーブデータ↓<br><span id="saveHyouji"></span>';
     document.getElementById('saveHyouji').innerHTML = '<textarea cols="10" rows="10">' + dataExport() + '</textarea>';
 }
+
+/**
+ * HTML文字列をエスケープ
+ * @param {string} convertString エスケープ元のHTML文字列
+ * @return {string} エスケープされたHTML文字列を返す
+ * @author https://shanabrian.com/web/javascript/escape-html.php
+ */
+function escapeHtml(convertString) {
+    if (typeof convertString !== 'string') return convertString;
+
+    var patterns = {
+        '<': '&lt;',
+        '>': '&gt;',
+        '&': '&amp;',
+        '"': '&quot;',
+        '\'': '&#x27;',
+        '`': '&#x60;'
+    };
+
+    return convertString.replace(/[<>&"'`]/g, function (match) {
+        return patterns[match];
+    });
+};
