@@ -249,7 +249,7 @@ function dataImport_ButtonB() {
 
     }
     else {
-        if (dataImport(reader.result)) {
+        if (dataImport(e.value)) {
             toastr.options = {
                 "closeButton": true,
                 "debug": false,
