@@ -52,7 +52,7 @@ function dataImport(ImportData) {
 
         x1push();
 
-        document.getElementById('shopNameArea').innerHTML = shopname
+        document.getElementById('shopNameArea').textContent = shopname
 
         return true;
     } catch (error) {

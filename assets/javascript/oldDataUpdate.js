@@ -106,7 +106,7 @@ function convertOldSavedata(ImportData) {
         }
     }
 
-    document.getElementById('shopNameArea').innerHTML = shopname
+    document.getElementById('shopNameArea').textContent = shopname
 
     updateHyouji();
     itemAllLoad();
