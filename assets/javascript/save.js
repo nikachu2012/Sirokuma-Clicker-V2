@@ -52,7 +52,7 @@ function dataImport(ImportData) {
 
         x1push();
 
-        document.getElementById('shopNameArea').innerHTML = shopname + '<br>しろくまショップ';
+        document.getElementById('shopNameArea').innerHTML = shopname
 
         return true;
     } catch (error) {

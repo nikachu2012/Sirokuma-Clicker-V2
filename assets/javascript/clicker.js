@@ -336,14 +336,14 @@ function changeShopShoki() {
 }
 
 function changeShopUpdate() {
-    document.getElementById('shopNameArea').textContent = shopname + '<br>しろくまショップ';
+    document.getElementById('shopNameArea').textContent = shopname
 }
 
 
 function shopnameConfirm() {
     const textbox = document.getElementById("shopnameTextbox")
     shopname = textbox.value;
-    document.getElementById('shopNameArea').textContent = shopname + '<br>しろくまショップ';
+    document.getElementById('shopNameArea').textContent = shopname
     batuclick();
 }
 

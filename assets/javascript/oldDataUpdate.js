@@ -106,7 +106,7 @@ function convertOldSavedata(ImportData) {
         }
     }
 
-    document.getElementById('shopNameArea').innerHTML = shopname + '<br>しろくまショップ';
+    document.getElementById('shopNameArea').innerHTML = shopname
 
     updateHyouji();
     itemAllLoad();
