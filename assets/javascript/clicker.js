@@ -41,7 +41,7 @@ const skillBonus = [10, 50, 100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 
 
 function skillClick(skillID) {
     if (skillKakutoku[skillID] == 1) { alert("すでに獲得しています") } else {
-        if (skillKakutoku[skillID - 1] == 1) {
+        if (skillID === 0 ? true : skillKakutoku[skillID - 1] == 1) {
             if (sirokumaSuu >= skillcost[skillID]) {
                 herasuSirokuma(skillcost[skillID]);//コスト分しろくま数からひく
                 sirokumaOneClick = skillBonus[skillID]; // しろくまが１クリックで増える量調整 
