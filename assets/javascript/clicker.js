@@ -330,8 +330,9 @@ let shopname = 'polar bear';
 function changeShopName() {
     hyoujiDialog(
         'ショップ名の変更',
-        `ショップ名を変更することができます。<br>長い名前や日本語を入れるとセーブデータのデータ量が増えます。<br><br><textarea id="shopnameTextbox" style="width: calc(100% - 9px); resize: none;height: 100px;">${shopname}</textarea>`,
+        `ショップ名を変更することができます。<br>長い名前や日本語を入れるとセーブデータのデータ量が増えます。<br><br><textarea id="shopnameTextbox" style="width: calc(100% - 9px); resize: none;height: 100px;"></textarea>`,
         '<button style="font-size: small;" onclick="shopnameConfirm();">決めた</button><button style="font-size: small;" onclick="batuclick();">やっぱいいや</button>')
+    document.querySelector("#shopnameTextbox").textContent = shopname;
 }
 
 function changeShopShoki() {
