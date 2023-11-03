@@ -27,7 +27,7 @@ function clickSirokuma() {
 }
 
 function updateHyouji() {
-    document.getElementById('hyoujiSirokumaSuu').innerHTML = sirokumaSuu;
+    document.getElementById('hyoujiSirokumaSuu').textContent = sirokumaSuu;
 }
 
 // スキル値段
@@ -47,7 +47,7 @@ function skillClick(skillID) {
                 sirokumaOneClick = skillBonus[skillID]; // しろくまが１クリックで増える量調整 
                 skillKakutoku[skillID] = 1; // 獲得変数に１
 
-                document.getElementById(`skill${skillID + 1}kakutokuDesc`).innerHTML = "獲得済み"; //説明を獲得済みに変更
+                document.getElementById(`skill${skillID + 1}kakutokuDesc`).textContent = "獲得済み"; //説明を獲得済みに変更
             }
             else { alert("しろくま数が" + skillcost[skillID] + "に達していません。しろくま数を貯めてください。") }
         }
@@ -76,19 +76,11 @@ function itembuy(id) {
         itemcost[id] = itemHyouji[id];
         item_hyoujiUpdate();
 
-        document.getElementById(`item${id + 1}havekazu`).innerHTML = itemcount[id].toLocaleString();
-        document.getElementById(`item${id + 1}MotterukazuHyouji`).innerHTML = itemcount[id].toLocaleString() + '&nbsp;個';
+        document.getElementById(`item${id + 1}havekazu`).textContent = itemcount[id].toLocaleString();
+        document.getElementById(`item${id + 1}MotterukazuHyouji`).textContent = itemcount[id].toLocaleString() + ' 個';
     }
     else { alert('しろくま数が' + itemHyouji[id] + 'に達していません。しろくま数を貯めてください。') }
 }
-
-setInterval(() => {
-    if (buyKosuu == 1) { }
-    else if (buyKosuu == 10) { }
-    else if (buyKosuu == 100) { }
-    else { error_critical(200) }
-}, 1000);
-
 
 setInterval(() => { // アイテムで増える部分の計算
     let itemBonusList = [];
@@ -133,32 +125,39 @@ function item_hyoujiUpdate() {
                 itemHyouji[index] = itemHyouji[index] + itemhyoujiBuffer;
             }
         }
-        document.getElementById(`item${index + 1}-sirokumacost`).innerHTML = itemHyouji[index].toLocaleString() + '&nbsp;しろくま';
-        document.getElementById(`item${index + 1}nedan`).innerHTML = itemHyouji[index].toLocaleString() + '&nbsp;しろくま';
+        document.getElementById(`item${index + 1}-sirokumacost`).textContent = itemHyouji[index].toLocaleString() + ' しろくま';
+        document.getElementById(`item${index + 1}nedan`).textContent = itemHyouji[index].toLocaleString() + ' しろくま';
     }
 }
 
 function x1push() {
     buyKosuu = 1;
-    document.getElementById('x1text').innerHTML = '<span style="text-shadow: #FFFFFF 1px 0 5px;">x1</span>';
-    document.getElementById('x10text').innerHTML = 'x10';
-    document.getElementById('x100text').innerHTML = 'x100';
+    const el = document.createElement("span");
+    el.textContent = "x1";
+    el.style.textShadow = "#FFFFFF 1px 0 5px;";
+    document.getElementById('x10text').textContent = 'x10';
+    document.getElementById('x100text').textContent = 'x100';
     item_hyoujiUpdate();
 }
 
 function x10push() {
     buyKosuu = 10;
-    document.getElementById('x1text').innerHTML = 'x1';
-    document.getElementById('x10text').innerHTML = '<span style="text-shadow: #FFFFFF 1px 0 5px;">x10</span>';
-    document.getElementById('x100text').innerHTML = 'x100';
+    document.getElementById('x1text').textContent = 'x1';
+    const el = document.createElement("span");
+    el.textContent = "x10";
+    el.style.textShadow = "#FFFFFF 1px 0 5px;";
+    document.getElementById('x100text').textContent = 'x100';
     item_hyoujiUpdate();
 }
 
 function x100push() {
     buyKosuu = 100;
-    document.getElementById('x1text').innerHTML = 'x1';
-    document.getElementById('x10text').innerHTML = 'x10';
-    document.getElementById('x100text').innerHTML = '<span style="text-shadow: #FFFFFF 1px 0 5px;">x100</span>';
+    document.getElementById('x1text').textContent = 'x1';
+    document.getElementById('x10text').textContent = 'x10';
+
+    const el = document.createElement("span");
+    el.textContent = "x100";
+    el.style.textShadow = "#FFFFFF 1px 0 5px;";
     item_hyoujiUpdate();
 }
 
@@ -166,10 +165,10 @@ x1push();
 
 function itemAllLoad() {
     for (let index = 0; index < 15; index++) {
-        document.getElementById(`item${index + 1}-sirokumacost`).innerHTML = itemcost[index].toLocaleString() + '&nbsp;しろくま';
-        document.getElementById(`item${index + 1}nedan`).innerHTML = itemcost[index].toLocaleString() + '&nbsp;しろくま';
-        document.getElementById(`item${index + 1}havekazu`).innerHTML = itemcount[index].toLocaleString();
-        document.getElementById(`item${index + 1}MotterukazuHyouji`).innerHTML = itemcount[index].toLocaleString() + '&nbsp;個';
+        document.getElementById(`item${index + 1}-sirokumacost`).textContent = itemcost[index].toLocaleString() + ' しろくま';
+        document.getElementById(`item${index + 1}nedan`).textContent = itemcost[index].toLocaleString() + ' しろくま';
+        document.getElementById(`item${index + 1}havekazu`).textContent = itemcount[index].toLocaleString();
+        document.getElementById(`item${index + 1}MotterukazuHyouji`).textContent = itemcount[index].toLocaleString() + ' 個';
     }
 }
 
@@ -191,11 +190,13 @@ function batuclick() {
 }
 
 function dataExport_button() {
+    const exp = dataExport();
     hyoujiDialog(
         'セーブの書き出し',
-        '<span style="font-size: smaller; ">今のセーブデータのコードです。コピーして安全なところに保存しておいてね</span><textarea rows="8" style="width: calc(100% - 9px);" margin-left:3px; margin-top: 1px;">' + dataExport() + ' </textarea>',
+        '<span style="font-size: smaller; ">今のセーブデータのコードです。コピーして安全なところに保存しておいてね</span><textarea id="saveDataArea" rows="8" style="width: calc(100% - 9px);" margin-left:3px; margin-top: 1px;"></textarea>',
         '<button onclick="batuclick();">保存完了！</button>'
     )
+    document.querySelector("#saveDataArea").textContent = exp;
 }
 
 function dataImport_button() {
@@ -347,11 +348,3 @@ function shopnameConfirm() {
     batuclick();
 }
 
-// ==========================================
-// エラープログラム
-// ==========================================
-
-function error_critical(errorcode) {
-    document.getElementById('index_body').innerHTML = 'Sirokuma-Clicker Version' + clicker_version + '<br>critical error.  Error Code' + errorcode + '<br><br>↓最終セーブデータ↓<br><span id="saveHyouji"></span>';
-    document.getElementById('saveHyouji').innerHTML = '<textarea cols="10" rows="10">' + dataExport() + '</textarea>';
-}
