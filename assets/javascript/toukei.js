@@ -2,7 +2,7 @@
 bulidHyouji = 0;
 
 ToukeiHyouji = 0;
-function showSetting(){
+function showTokei(){
     if(ToukeiHyouji == 0){
         infoHyouji = 0;
         document.querySelector('.centerContents-toukei').classList.remove("hidden")
