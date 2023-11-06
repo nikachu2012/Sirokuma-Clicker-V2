@@ -28,7 +28,7 @@ function clickSirokuma() {
 
 function updateHyouji() {
     document.getElementById('hyoujiSirokumaSuu').textContent = sirokumaSuu;
-    document.getElementById('shirokuma_lifetime').textContent = sirokumaSuuRuikei;
+    document.getElementById('shirokuma_lifetime').textContent = "いままで集めたしろくまの数:"+sirokumaSuuRuikei.toString(10);
 }
 
 // スキル値段
