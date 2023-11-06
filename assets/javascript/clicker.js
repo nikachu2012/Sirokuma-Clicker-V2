@@ -28,6 +28,7 @@ function clickSirokuma() {
 
 function updateHyouji() {
     document.getElementById('hyoujiSirokumaSuu').textContent = sirokumaSuu;
+    document.getElementById('shirokuma_lifetime').textContent = sirokumaSuuRuikei;
 }
 
 // スキル値段
