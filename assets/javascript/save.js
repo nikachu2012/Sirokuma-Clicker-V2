@@ -53,6 +53,13 @@ function dataImport(ImportData) {
         x1push();
 
         document.getElementById('shopNameArea').textContent = shopname
+        itemcost.forEach((e, i) => {
+            if (i === 0) { }
+            else {
+                itemBonusList.push(itemcount[i] * itemParBonus[i] * itemRatio[i])
+                Sps += itemcount[i] * itemParBonus[i] * itemRatio[i]
+            }
+        })
 
         return true;
     } catch (error) {
@@ -104,10 +111,6 @@ function dataSave() {
 
 }
 
-function dataLoad() {
-    SaveData = localStorage.getItem('saveDataNew')
-    dataImport(SaveData)
-}
 
 function dataRemove() {
     var result = window.confirm('この操作を行うとデータが削除され、ページが再読み込みされます。よろしいですか？')

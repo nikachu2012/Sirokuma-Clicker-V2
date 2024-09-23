@@ -40,22 +40,22 @@ let skillKakutoku = new Array(15).fill(0);
 const skillBonus = [10, 50, 100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000, 8000000, 10000000, 15000000]
 
 function skillClick(skillID) {
-    if (skillKakutoku[skillID] == 1) { alert("すでに獲得しています") } else {
-        if (skillID === 0 ? true : skillKakutoku[skillID - 1] == 1) {
-            if (sirokumaSuu >= skillcost[skillID]) {
-                herasuSirokuma(skillcost[skillID]);//コスト分しろくま数からひく
-                sirokumaOneClick = skillBonus[skillID]; // しろくまが１クリックで増える量調整 
-                skillKakutoku[skillID] = 1; // 獲得変数に１
+    if (skillKakutoku[skillID] == 1) { alert("すでに獲得しています") }
+    else if (skillID === 0 ? true : skillKakutoku[skillID - 1] == 1) {
+        if (sirokumaSuu >= skillcost[skillID]) {
+            herasuSirokuma(skillcost[skillID]);//コスト分しろくま数からひく
+            sirokumaOneClick = skillBonus[skillID]; // しろくまが１クリックで増える量調整 
+            skillKakutoku[skillID] = 1; // 獲得変数に１
 
-                document.getElementById(`skill${skillID + 1}kakutokuDesc`).textContent = "獲得済み"; //説明を獲得済みに変更
-            }
-            else { alert("しろくま数が" + skillcost[skillID] + "に達していません。しろくま数を貯めてください。") }
+            document.getElementById(`skill${skillID + 1}kakutokuDesc`).textContent = "獲得済み"; //説明を獲得済みに変更
         }
-        else {
-            alert("前のスキルを先に獲得してください。")
-        }
+        else { alert("しろくま数が" + skillcost[skillID] + "に達していません。しろくま数を貯めてください。") }
+    }
+    else {
+        alert("前のスキルを先に獲得してください。")
     }
 }
+
 
 let itemcost = [15, 100, 1000, 10000, 110000, 5800000, 12500000, 13000000, 135000000, 1400000000, 15000000000, 160000000000, 1750000000000, 19000000000000, 21000000000000];
 
@@ -68,34 +68,29 @@ let itemRatio = new Array(15).fill(1)
 
 let buyKosuu = 1;
 let ratio = 1.15;
-
+let itemBonusList = [];
+let Sps = 0
 function itembuy(id) {
     if (sirokumaSuu >= itemHyouji[id]) {
         herasuSirokuma(itemHyouji[id])
         itemcount[id] = itemcount[id] + buyKosuu;
         itemcost[id] = itemHyouji[id];
+        itemBonusList[id - 1] = itemcount[id] * itemParBonus[id] * itemRatio[id]
         item_hyoujiUpdate();
-
+        calcSps()
         document.getElementById(`item${id + 1}havekazu`).textContent = itemcount[id].toLocaleString();
         document.getElementById(`item${id + 1}MotterukazuHyouji`).textContent = itemcount[id].toLocaleString() + ' 個';
     }
     else { alert('しろくま数が' + itemHyouji[id] + 'に達していません。しろくま数を貯めてください。') }
 }
-
+const calcSps = () =>{
+    Sps = 0
+    for (const e of itemBonusList) {
+        Sps += e
+    }
+}
 setInterval(() => { // アイテムで増える部分の計算
-    let itemBonusList = [];
-
-    itemcost.forEach((e, i) => {
-        if (i === 0) { }
-        else {
-            itemBonusList.push(itemcount[i] * itemParBonus[i] * itemRatio[i])
-        }
-    })
-
-    let total = itemBonusList.reduce((s, e) => {
-        return s + e;
-    }, 0);
-    fuyasuSirokuma(total);
+    fuyasuSirokuma(Sps);
 }, 1000);
 
 setInterval(() => {
