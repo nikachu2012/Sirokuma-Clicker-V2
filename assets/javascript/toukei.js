@@ -22,6 +22,7 @@ const refreshToukei = ()=>{
     toukei_content[3].textContent = `${keika_jikan[0]}年${keika_jikan[1]}日${keika_jikan[2]}時間${keika_jikan[3]}分${keika_jikan[4]}秒`
     toukei_content[4].textContent = Sps
     toukei_content[5].textContent = sirokumaOneClick
+    toukei_content[6].textContent = sirokumaClicks
     toukei_content[7].textContent = sirokumaSuuByC
     toukei_content[8].textContent = clicker_version
     
