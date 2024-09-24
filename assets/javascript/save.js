@@ -10,7 +10,9 @@ function dataExport() {
         "itcos": itemcost,
         "itcnt": itemcount,
         "itrat": itemRatio,
-        "sn": encodeURIComponent(shopname)
+        "sn": encodeURIComponent(shopname),
+        "cc": sirokumaClicks,
+        "sbc": sirokumaSuuByC
     }
 
     exportBASE64 = window.btoa(JSON.stringify(exportbuffer));
@@ -39,6 +41,14 @@ function dataImport(ImportData) {
         itemcount = jsonObject.itcnt
         itemRatio = jsonObject.itrat
         shopname = decodeURIComponent(jsonObject.sn);
+        if (jsonObject.cc == undefined) {
+            sirokumaClicks = 0
+            sirokumaSuuByC = 0
+        } else {
+            sirokumaClicks = jsonObject.cc
+            sirokumaSuuByC = jsonObject.sbc
+        }
+
 
 
         for (let index = 0; index < 15; index++) {
@@ -80,7 +90,7 @@ function dataImport(ImportData) {
 
 setInterval(() => {
     dataSave()
-}, 10000);
+}, 60000);
 
 function dataSave() {
     try {

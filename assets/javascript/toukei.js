@@ -19,7 +19,16 @@ const refreshToukei = ()=>{
     toukei_content[0].textContent = sirokumaSuu
     toukei_content[1].textContent = sirokumaSuuRuikei
     toukei_content[2].textContent = sirokumaSuuRuikeiHerasu
+    toukei_content[3].textContent = `${keika_jikan[0]}年${keika_jikan[1]}日${keika_jikan[2]}時間${keika_jikan[3]}分${keika_jikan[4]}秒`
+    toukei_content[4].textContent = Sps
+    toukei_content[5].textContent = sirokumaOneClick
+    toukei_content[7].textContent = sirokumaSuuByC
+    toukei_content[8].textContent = clicker_version
+    
 
+
+}
+const addJisseki = ()=>{
 
 }
 upgradeColor = ["red","pink","purple","blueviolet","loyalblue","blue","lightblue","cyan","teal","green","limegreen","lime","yellow","orange","brown"]
