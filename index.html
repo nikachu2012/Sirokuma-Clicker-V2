@@ -35,9 +35,9 @@
         <b>しろくまクリッカー</b>&nbsp;©︎2021, Nikachu&nbsp;|&nbsp;
         <span id="clickerw-title-version"></span>
         <span id="clickerw-title-bulidNumber"></span>
-        &nbsp;<a onClick="urlopen('https://portfolio.nikachu.net')" class="electron-link"
-            style="color: white;">ニカチュウのポートフォリオ</a>&nbsp;|&nbsp;<a class="electron-link"
-            onClick="urlopen('https://blog.nikachu.net')" style="color: white;">ブログ</a>
+        &nbsp;
+        <a onClick="urlopen('https://portfolio.nikachu.net')" class="electron-link" style="color: white;">ニカチュウのポートフォリオ</a>&nbsp;|&nbsp;
+        <a class="electron-link" onClick="urlopen('https://blog.nikachu.net')" style="color: white;">ブログ</a>
     </div>
 
 
@@ -50,8 +50,8 @@
             <div class="clickSpace-SirokumaShopText" id="shopNameArea">しろくまショップ</div>
             <img src="image/sirokuma.webp" alt="" class="clickSpace-pictureSirokuma" onclick="clickSirokuma();">
             <div class="clickSpace-SirokumaHyouji">
-                <span id="hyoujiSirokumaSuu" style="font-size: xx-large;">0</span><br><span
-                    style="font-size: large;">しろくま</span>
+                <span id="hyoujiSirokumaSuu" style="font-size: xx-large;">0</span><br>
+                <span style="font-size: large;">しろくま</span>
             </div>
         </div>
 
@@ -60,30 +60,23 @@
 
             <div class="centerSpace-headMenu">
                 <div class="headmenu-container">
-                    <div onclick="dataSave();" class="button1 clickerw-container-style"><span
-                            class="container-text_transform">セーブ</span></div>
-                    <div onclick="showCenterContent('setting');" class="button2 clickerw-container-style"><span
-                            class="container-text_transform">設定</span></div>
-                    <div class="button-text clickerw-container-style-textarea"><span class="container-text_transform"
-                            id="top-textarea">しろくまを作ろう</span></div>
-                    <div onclick="showCenterContent('toukei');" class="button3 clickerw-container-style"><span
-                            class="container-text_transform">統計&実績</span></div>
-                    <div onclick="showTensei();" class="button4 clickerw-container-style"><span
-                            class="container-text_transform">転生(未実装)</span></div>
+                    <div onclick="dataSave();" class="button1 clickerw-container-style"><span class="container-text_transform">セーブ</span></div>
+                    <div onclick="showCenterContent('setting');" class="button2 clickerw-container-style"><span class="container-text_transform">設定</span></div>
+                    <div class="button-text clickerw-container-style-textarea"><span class="container-text_transform" id="top-textarea">しろくまを作ろう</span></div>
+                    <div onclick="showCenterContent('toukei');" class="button3 clickerw-container-style"><span class="container-text_transform">統計&実績</span></div>
+                    <div onclick="showTensei();" class="button4 clickerw-container-style"><span class="container-text_transform">転生(未実装)</span></div>
                 </div>
             </div>
 
             <div class="clickerw-centerContents" id="clickerw-centerContents">
                 <div class="centerContents-center centerContents-information">
-                    <div class="centerContents-title contents_text"><span
-                            class="centerContents-titletext">Information</span></div>
+                    <div class="centerContents-title contents_text"><span class="centerContents-titletext">Information</span></div>
                     <br>
                     <div>
                         <div class="contents_text"><span class="centerContents-head2">しろくまクリッカーについて</span></div>
                         <div class="centerContents-contents">
                             <ul>
-                                <li>このゲームは<a href="https://github.com/nikachu2012"
-                                        style="color: white;">ニカチュウ</a>が制作しました。</li>
+                                <li>このゲームは<a href="https://github.com/nikachu2012" style="color: white;">ニカチュウ</a>が制作しました。</li>
                                 <li style="color: red;">注：バグを発見した際はニカチュウまでご報告ください。よろしくお願いします。</li>
                                 <li>Copyright &copy; 2021 Nikachu All rights reserved.</li>
                             </ul>
@@ -93,8 +86,19 @@
                     <div>
                         <div class="contents_text"><span class="centerContents-head2">更新履歴</span></div><br>
 
-                        <div class="contents_text"><span class="centerContents-head3">2023/11/03 version2.2.0.1
-                                release</span></div>
+                        <div class="contents_text"><span class="centerContents-head3">2024/10/29 version2.3.0.1release</span></div>
+                        <div class="centerContents-contents">
+                            統計の追加や内部の処理の改善をしました
+                            <ul>
+                                <li>統計機能の追加</li>
+                                <li>シロクマを増やすたびに建物によるしろくまの増加量を計算していた問題を修正</li>
+                                <li>不要な関数の削除</li>
+                                <li>自動セーブの間隔を10秒から60秒に変更</li>
+                                
+                            </ul>
+                            2024.10.29 04:00 p.m. by sirokuma<br><br>
+                        </div>
+                        <div class="contents_text"><span class="centerContents-head3">2023/11/03 version2.2.0.1release</span></div>
                         <div class="centerContents-contents">
                             主にインジェクション対策をしました<br>
                             も　う　で　き　ま　せ　ん
@@ -204,25 +208,25 @@
                 </div>
                 <div class="centerContents-center centerContents-setting hidden">
                     <div style="position: relative;">
-                        <div class="tojiruButton" onclick="showCenterContent('information')"><i class="fas fa-times"
-                                style="color: white; font-size:x-large;"></i></div>
+                        <div class="tojiruButton" onclick="showCenterContent('information')"><i class="fas fa-times" style="color: white; font-size:x-large;"></i></div>
                         <div class="centerContents-title contents_text"><span class="centerContents-titletext">設定</span>
                         </div><br>
                         <div>
                             <div class="contents_text"><span class="centerContents-head2">一般設定</span></div>
                             <div class="centerContents-contents">
-                                <button onclick="dataSave();">今すぐセーブ</button>&nbsp;&nbsp;<i
-                                    class="fas fa-info-circle"></i>今すぐセーブができます。<br>
-                                <button onclick="dataExport_button();">セーブを書き出し</button>&nbsp;<button
-                                    onclick="dataImport_button();">セーブの読み込み</button>&nbsp;&nbsp;<i
-                                    class="fas fa-info-circle"></i>セーブの書き出しと読み込みができます。<br>
-                                <button onclick="dataExport_File();">セーブをファイルで保存</button>&nbsp;<button
-                                    onclick="dataImport_file();">ファイルからセーブを読み込み</button><br>
+                                <button onclick="dataSave();">今すぐセーブ</button>&nbsp;&nbsp;
+                                <i class="fas fa-info-circle"></i>今すぐセーブができます。<br>
+                                <button onclick="dataExport_button();">セーブを書き出し</button>&nbsp;
+                                <button onclick="dataImport_button();">セーブの読み込み</button>&nbsp;&nbsp;
+                                <i class="fas fa-info-circle"></i>セーブの書き出しと読み込みができます。<br>
+                                <button onclick="dataExport_File();">セーブをファイルで保存</button>&nbsp;
+                                <button onclick="dataImport_file();">ファイルからセーブを読み込み</button><br>
                                 <div style="border: 1px solid red; margin-top: 5px; padding: 5px 5px 5px 5px;">
                                     <span style="color: red;">=== 危険 ===</span>
-                                    <button onclick="dataRemove();">セーブを削除</button>&nbsp;&nbsp;<span
-                                        style="color: red;"><i
-                                            class="fas fa-exclamation-circle"></i>この操作をするとデータが削除されます。</span>
+                                    <button onclick="dataRemove();">セーブを削除</button>&nbsp;&nbsp;
+                                    <span style="color: red;">
+                                        <i class="fas fa-exclamation-circle"></i>この操作をするとデータが削除されます。
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -230,8 +234,9 @@
                 </div>
                 <div class="centerContents-center centerContents-toukei hidden">
                     <div style="position: relative;">
-                        <div class="tojiruButton" onclick="showCenterContent('information')"><i class="fas fa-times"
-                                style="color: white; font-size:x-large;"></i></div>
+                        <div class="tojiruButton" onclick="showCenterContent('information')">
+                            <i class="fas fa-times" style="color: white; font-size:x-large;"></i>
+                        </div>
                         <div class="centerContents-title contents_text"><span class="centerContents-titletext">統計</span>
                         </div><br>
                         <div>
@@ -264,51 +269,22 @@
 
         <div class="upgradeSpace-Skill">
             <div class="skillContainer pointer-skill">
-                <div class="grid1 grid-style" onclick="skillClick(0);" onmouseover="skill1over();"
-                    onmouseleave="skill1leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: red;"></i>
-                </div>
-                <div class="grid2 grid-style" onclick="skillClick(1);" onmouseover="skill2over();"
-                    onmouseleave="skill2leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: pink;"></i>
-                </div>
-                <div class="grid3 grid-style" onclick="skillClick(2);" onmouseover="skill3over();"
-                    onmouseleave="skill3leave();"><i class="far fa-hand-pointer upgrade-icon"
-                        style="color: purple;"></i></div>
-                <div class="grid4 grid-style" onclick="skillClick(3);" onmouseover="skill4over();"
-                    onmouseleave="skill4leave();"><i class="far fa-hand-pointer upgrade-icon"
-                        style="color: blueviolet;"></i></div>
-                <div class="grid5 grid-style" onclick="skillClick(4);" onmouseover="skill5over();"
-                    onmouseleave="skill5leave();"><i class="far fa-hand-pointer upgrade-icon"
-                        style="color: royalblue;"></i></div>
-                <div class="grid6 grid-style" onclick="skillClick(5);" onmouseover="skill6over();"
-                    onmouseleave="skill6leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: blue;"></i>
-                </div>
-                <div class="grid7 grid-style" onclick="skillClick(6);" onmouseover="skill7over();"
-                    onmouseleave="skill7leave();"><i class="far fa-hand-pointer upgrade-icon"
-                        style="color: lightblue;"></i></div>
-                <div class="grid8 grid-style" onclick="skillClick(7);" onmouseover="skill8over();"
-                    onmouseleave="skill8leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: cyan;"></i>
-                </div>
-                <div class="grid9 grid-style" onclick="skillClick(8);" onmouseover="skill9over();"
-                    onmouseleave="skill9leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: teal;"></i>
-                </div>
-                <div class="grid10 grid-style" onclick="skillClick(9);" onmouseover="skill10over();"
-                    onmouseleave="skill10leave();"><i class="far fa-hand-pointer upgrade-icon"
-                        style="color: green;"></i></div>
-                <div class="grid11 grid-style" onclick="skillClick(10);" onmouseover="skill11over();"
-                    onmouseleave="skill11leave();"><i class="far fa-hand-pointer upgrade-icon"
-                        style="color: limegreen;"></i></div>
-                <div class="grid12 grid-style" onclick="skillClick(11);" onmouseover="skill12over();"
-                    onmouseleave="skill12leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: lime;"></i>
-                </div>
-                <div class="grid13 grid-style" onclick="skillClick(12);" onmouseover="skill13over();"
-                    onmouseleave="skill13leave();"><i class="far fa-hand-pointer upgrade-icon"
-                        style="color: yellow;"></i></div>
-                <div class="grid14 grid-style" onclick="skillClick(13);" onmouseover="skill14over();"
-                    onmouseleave="skill14leave();"><i class="far fa-hand-pointer upgrade-icon"
-                        style="color: orange;"></i></div>
-                <div class="grid15 grid-style" onclick="skillClick(14);" onmouseover="skill15over();"
-                    onmouseleave="skill15leave();"><i class="far fa-hand-pointer upgrade-icon"
-                        style="color: brown;"></i></div>
+                <div class="grid1 grid-style" onclick="skillClick(0);" onmouseover="skill1over();" onmouseleave="skill1leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: red;"></i></div>
+                <div class="grid2 grid-style" onclick="skillClick(1);" onmouseover="skill2over();" onmouseleave="skill2leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: pink;"></i></div>
+                <div class="grid3 grid-style" onclick="skillClick(2);" onmouseover="skill3over();" onmouseleave="skill3leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: purple;"></i></div>
+                <div class="grid4 grid-style" onclick="skillClick(3);" onmouseover="skill4over();" onmouseleave="skill4leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: blueviolet;"></i></div>
+                <div class="grid5 grid-style" onclick="skillClick(4);" onmouseover="skill5over();" onmouseleave="skill5leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: royalblue;"></i></div>
+                <div class="grid6 grid-style" onclick="skillClick(5);" onmouseover="skill6over();" onmouseleave="skill6leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: blue;"></i> </div>
+                <div class="grid7 grid-style" onclick="skillClick(6);" onmouseover="skill7over();" onmouseleave="skill7leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: lightblue;"></i></div>
+                <div class="grid8 grid-style" onclick="skillClick(7);" onmouseover="skill8over();" onmouseleave="skill8leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: cyan;"></i> </div>
+                <div class="grid9 grid-style" onclick="skillClick(8);" onmouseover="skill9over();" onmouseleave="skill9leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: teal;"></i></div>
+                <div class="grid10 grid-style" onclick="skillClick(9);" onmouseover="skill10over();" onmouseleave="skill10leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: green;"></i></div>
+                <div class="grid11 grid-style" onclick="skillClick(10);" onmouseover="skill11over();" onmouseleave="skill11leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: limegreen;"></i></div>
+                <div class="grid12 grid-style" onclick="skillClick(11);" onmouseover="skill12over();" onmouseleave="skill12leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: lime;"></i></div>
+                <div class="grid13 grid-style" onclick="skillClick(12);" onmouseover="skill13over();" onmouseleave="skill13leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: yellow;"></i></div>
+                <div class="grid14 grid-style" onclick="skillClick(13);" onmouseover="skill14over();" onmouseleave="skill14leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: orange;"></i></div>
+                <div class="grid15 grid-style" onclick="skillClick(14);" onmouseover="skill15over();" onmouseleave="skill15leave();"><i class="far fa-hand-pointer upgrade-icon" style="color: brown;"></i></div>
+
             </div>
         </div>
 
@@ -318,8 +294,7 @@
             <b style="padding-top: 2px;">アイテム</b>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span style="cursor: pointer;">
-                <span onclick="x1push();" id="x1text"><span
-                        style="text-shadow: #FFFFFF 1px 0 5px;">x1</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span onclick="x1push();" id="x1text"><span style="text-shadow: #FFFFFF 1px 0 5px;">x1</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span onclick="x10push();" id="x10text">x10</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span onclick="x100push();" id="x100text">x100</span>
             </span>
@@ -328,8 +303,7 @@
         <div class="upgradeSpace-buliding">
 
 
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(0);" onmouseover="item1over();"
-                onmouseleave="item1leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(0);" onmouseover="item1over();" onmouseleave="item1leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item1.png" alt="">
                     <div class="bulid-button-name">
@@ -339,8 +313,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item1havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(1);" onmouseover="item2over();"
-                onmouseleave="item2leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(1);" onmouseover="item2over();" onmouseleave="item2leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item2.png" alt="">
                     <div class="bulid-button-name">
@@ -350,8 +323,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item2havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(2);" onmouseover="item3over();"
-                onmouseleave="item3leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(2);" onmouseover="item3over();" onmouseleave="item3leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item3.png" alt="">
                     <div class="bulid-button-name">
@@ -361,8 +333,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item3havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(3);" onmouseover="item4over();"
-                onmouseleave="item4leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(3);" onmouseover="item4over();" onmouseleave="item4leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item4.png" alt="">
                     <div class="bulid-button-name">
@@ -372,8 +343,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item4havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(4);" onmouseover="item5over();"
-                onmouseleave="item5leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(4);" onmouseover="item5over();" onmouseleave="item5leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item5.png" alt="">
                     <div class="bulid-button-name">
@@ -383,8 +353,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item5havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(5);" onmouseover="item6over();"
-                onmouseleave="item6leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(5);" onmouseover="item6over();" onmouseleave="item6leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item6.png" alt="">
                     <div class="bulid-button-name">
@@ -394,8 +363,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item6havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(6);" onmouseover="item7over();"
-                onmouseleave="item7leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(6);" onmouseover="item7over();" onmouseleave="item7leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item7.png" alt="">
                     <div class="bulid-button-name">
@@ -405,8 +373,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item7havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(7);" onmouseover="item8over();"
-                onmouseleave="item8leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(7);" onmouseover="item8over();" onmouseleave="item8leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item8.png" alt="">
                     <div class="bulid-button-name">
@@ -416,8 +383,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item8havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(8);" onmouseover="item9over();"
-                onmouseleave="item9leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(8);" onmouseover="item9over();" onmouseleave="item9leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item9.png" alt="">
                     <div class="bulid-button-name">
@@ -427,8 +393,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item9havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(9);" onmouseover="item10over();"
-                onmouseleave="item10leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(9);" onmouseover="item10over();" onmouseleave="item10leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item10.png" alt="">
                     <div class="bulid-button-name">
@@ -438,8 +403,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item10havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(10);" onmouseover="item11over();"
-                onmouseleave="item11leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(10);" onmouseover="item11over();" onmouseleave="item11leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item11.png" alt="">
                     <div class="bulid-button-name">
@@ -449,8 +413,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item11havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(11);" onmouseover="item12over();"
-                onmouseleave="item12leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(11);" onmouseover="item12over();" onmouseleave="item12leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item12.png" alt="">
                     <div class="bulid-button-name">
@@ -460,8 +423,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item12havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(12);" onmouseover="item13over();"
-                onmouseleave="item13leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(12);" onmouseover="item13over();" onmouseleave="item13leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item13.png" alt="">
                     <div class="bulid-button-name">
@@ -471,8 +433,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item13havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(13);" onmouseover="item14over();"
-                onmouseleave="item14leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(13);" onmouseover="item14over();" onmouseleave="item14leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item14.png" alt="">
                     <div class="bulid-button-name">
@@ -482,8 +443,7 @@
                 </div>
                 <div class="bulid-button-havekazu" id="item14havekazu">0</div>
             </div>
-            <div class="upgradeSpace-buliding-button" onclick="itembuy(14);" onmouseover="item15over();"
-                onmouseleave="item15leave();">
+            <div class="upgradeSpace-buliding-button" onclick="itembuy(14);" onmouseover="item15over();" onmouseleave="item15leave();">
                 <div class="bulid-button-left">
                     <img src="image/itempicture/item15.png" alt="">
                     <div class="bulid-button-name">
@@ -516,12 +476,14 @@
 -->
     <div class="item1desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item1.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item1.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">シャープペン<br>
-                <span style="font-size: small;" id="item1-sirokumacost">15 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item1MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item1-sirokumacost">15 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item1MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
@@ -534,12 +496,14 @@
 
     <div class="item2desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item2.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item2.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">元素記号したじき<br>
-                <span style="font-size: small;" id="item2-sirokumacost">100 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item2MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item2-sirokumacost">100 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item2MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
@@ -552,17 +516,19 @@
 
     <div class="item3desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item3.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item3.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">家<br>
-                <span style="font-size: small;" id="item3-sirokumacost">1,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item3MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item3-sirokumacost">1,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item3MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             家の中で作業できるようになり、作業効率が上がる。<br>
-            クッキーが1秒に10増える。<br>
+            しろくまが1秒に10増える。<br>
 
         </div>
     </div>
@@ -570,17 +536,19 @@
 
     <div class="item4desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item4.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item4.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">コンピュータ<br>
-                <span style="font-size: small;" id="item4-sirokumacost">10,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item4MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item4-sirokumacost">10,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item4MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             コンピュータを使うことで作業効率が上がる。<br>
-            クッキーが1秒に100個増える。<br>
+            しろくまが1秒に100個増える。<br>
 
         </div>
     </div>
@@ -588,17 +556,19 @@
 
     <div class="item5desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item5.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item5.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">釣り場<br>
-                <span style="font-size: small;" id="item5-sirokumacost">110,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item5MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item5-sirokumacost">110,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item5MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             しろくまを釣ります。<br>
-            クッキーが1秒に1,000個づつ増える。<br>d
+            しろくまが1秒に1,000個づつ増える。<br>d
 
         </div>
     </div>
@@ -606,17 +576,19 @@
 
     <div class="item6desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item6.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item6.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">銀行<br>
-                <span style="font-size: small;" id="item6-sirokumacost">5,800,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item6MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item6-sirokumacost">5,800,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item6MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             利子からしろくまを生み出します。<br>
-            クッキーが1秒に5,000個づつ増える。<br>
+            しろくまが1秒に5,000個づつ増える。<br>
 
         </div>
     </div>
@@ -624,17 +596,19 @@
 
     <div class="item7desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item7.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item7.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">雪<br>
-                <span style="font-size: small;" id="item7-sirokumacost">12,500,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item7MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item7-sirokumacost">12,500,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item7MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             雪を使うことによりしろくまが過ごしやすくなり、生産効率が上がる。<br>
-            クッキーが1秒に10,000個づつ増える。<br>
+            しろくまが1秒に10,000個づつ増える。<br>
 
         </div>
     </div>
@@ -642,17 +616,19 @@
 
     <div class="item8desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item8.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item8.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">クジラ<br>
-                <span style="font-size: small;" id="item8-sirokumacost">13,000,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item8MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item8-sirokumacost">13,000,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item8MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             クジラを使うことにより生産効率が上がる<br>
-            クッキーが1秒に100,000個づつ増える。<br>
+            しろくまが1秒に100,000個づつ増える。<br>
 
         </div>
     </div>
@@ -660,17 +636,19 @@
 
     <div class="item9desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item9.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item9.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">工場<br>
-                <span style="font-size: small;" id="item9-sirokumacost">135,000,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item9MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item9-sirokumacost">135,000,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item9MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             工場でしろくまを生産します。<br>
-            クッキーが1秒に1,000,000個づつ増える。<br>
+            しろくまが1秒に1,000,000個づつ増える。<br>
 
         </div>
     </div>
@@ -678,17 +656,19 @@
 
     <div class="item10desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item10.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item10.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">３Dプリンター<br>
-                <span style="font-size: small;" id="item10-sirokumacost">1,400,000,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item10MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item10-sirokumacost">1,400,000,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item10MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             3Dプリンターでしろくまを生産します。<br>
-            クッキーが1秒に10,000,000個増える。<br>
+            しろくまが1秒に10,000,000個増える。<br>
 
         </div>
     </div>
@@ -696,17 +676,19 @@
 
     <div class="item11desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item11.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item11.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">グラフィックボード<br>
-                <span style="font-size: small;" id="item11-sirokumacost">15,000,000,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item11MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item11-sirokumacost">15,000,000,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item11MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             グラフィックボードでしろくまをエンコードします。<br>
-            クッキーが1秒に100,000,000個づつ増える。<br>
+            しろくまが1秒に100,000,000個づつ増える。<br>
 
         </div>
     </div>
@@ -714,17 +696,17 @@
 
     <div class="item12desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item12.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item12.png" alt="" style="width: 77px;"></div>
             <div class="itemdesc-upper-text">原子合成機<br>
-                <span style="font-size: small;" id="item12-sirokumacost">160,000,000,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item12MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item12-sirokumacost">160,000,000,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item12MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             しろくまを原子合成で生産します。<br>
-            クッキーが1秒に1,000,000,000個づつ増える。<br>
+            しろくまが1秒に1,000,000,000個づつ増える。<br>
 
         </div>
     </div>
@@ -732,17 +714,19 @@
 
     <div class="item13desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item13.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item13.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">タイムマシン<br>
-                <span style="font-size: small;" id="item13-sirokumacost">1,750,000,000,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item13MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item13-sirokumacost">1,750,000,000,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item13MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             タイムマシンで過去からしろくまをもってきます<br>
-            クッキーが1秒に10,000,000,000個づつ増える。<br>
+            しろくまが1秒に10,000,000,000個づつ増えます。<br>
 
         </div>
     </div>
@@ -750,17 +734,19 @@
 
     <div class="item14desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item14.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item14.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">JS Console<br>
-                <span style="font-size: small;" id="item14-sirokumacost">19,000,000,000,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item14MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item14-sirokumacost">19,000,000,000,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item14MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             しろくまクリッカーが動いているJavaScriptを書き換えることでしろくまを生み出します。<br>
-            クッキーが1秒に100,000,000,000個づつ増えます。<br>
+            しろくまが1秒に100,000,000,000個づつ増えます。<br>
 
         </div>
     </div>
@@ -768,17 +754,19 @@
 
     <div class="item15desc itemdata" style="background-color: white;">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture itemdesc-back-item"><img src="image/itempicture/item15.png" alt=""
-                    style="width: 77px;"></div>
+            <div class="itemdesc-picture itemdesc-back-item">
+                <img src="image/itempicture/item15.png" alt="" style="width: 77px;">
+            </div>
             <div class="itemdesc-upper-text">テッセラクト<br>
-                <span style="font-size: small;" id="item15-sirokumacost">21,000,000,000,000 しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="item15MotterukazuHyouji">0</span><span style="font-size: small;">&nbsp;所持</span>
+                <span style="font-size: small;" id="item15-sirokumacost">21,000,000,000,000 しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="item15MotterukazuHyouji">0</span>
+                <span style="font-size: small;">&nbsp;所持</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text" style="border-width:1px 0px 0px 0px;">
             遠くのところや宇宙からしろくまを取り出します。<br>
-            クッキーが1秒に1,000,000,000,000個づつ増えます。<br>
+            しろくまが1秒に1,000,000,000,000個づつ増えます。<br>
 
         </div>
     </div>
@@ -798,8 +786,8 @@
             <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: red;"></i></div>
             <div class="itemdesc-upper-text">ポインター(レッド)
                 <br>
-                <span style="font-size: small;">100しろくま</span><span style="font-size: small;">&nbsp;/&nbsp;</span><span
-                    style="font-size: small;" id="skill1kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">100しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;" id="skill1kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -814,12 +802,14 @@
 
     <div class="itemdesc skill2desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: pink;"></i></div>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: pink;"></i>
+            </div>
             <div class="itemdesc-upper-text">ポインター(ピンク)
                 <br>
-                <span style="font-size: small;">1,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill2kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">1,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill2kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -834,12 +824,14 @@
 
     <div class="itemdesc skill3desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: purple;"></i></div>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: purple;"></i>
+            </div>
             <div class="itemdesc-upper-text">ポインター(パープル)
                 <br>
-                <span style="font-size: small;">10,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill3kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">10,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill3kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -854,13 +846,14 @@
 
     <div class="itemdesc skill4desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: blueviolet;"></i>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: blueviolet;"></i>
             </div>
             <div class="itemdesc-upper-text">ポインター(バイオレット)
                 <br>
-                <span style="font-size: small;">50,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill4kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">50,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill4kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -875,13 +868,14 @@
 
     <div class="itemdesc skill5desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: royalblue;"></i>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: royalblue;"></i>
             </div>
             <div class="itemdesc-upper-text">ポインター(ロイヤルブルー)
                 <br>
-                <span style="font-size: small;">100,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill5kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">100,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill5kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -896,12 +890,14 @@
 
     <div class="itemdesc skill6desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: blue;"></i></div>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: blue;"></i>
+            </div>
             <div class="itemdesc-upper-text">ポインター(ブルー)
                 <br>
-                <span style="font-size: small;">500,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill6kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">500,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill6kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -916,13 +912,14 @@
 
     <div class="itemdesc skill7desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: lightblue;"></i>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: lightblue;"></i>
             </div>
             <div class="itemdesc-upper-text">ポインター(ライトブルー)
                 <br>
-                <span style="font-size: small;">1,000,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill7kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">1,000,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill7kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -937,12 +934,14 @@
 
     <div class="itemdesc skill8desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: cyan;"></i></div>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: cyan;"></i>
+            </div>
             <div class="itemdesc-upper-text">ポインター(シアン)
                 <br>
-                <span style="font-size: small;">5,000,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill8kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">5,000,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill8kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -957,12 +956,14 @@
 
     <div class="itemdesc skill9desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: teal;"></i></div>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: teal;"></i>
+            </div>
             <div class="itemdesc-upper-text">ポインター(ティール)
                 <br>
-                <span style="font-size: small;">10,000,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill9kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">10,000,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill9kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -977,12 +978,14 @@
 
     <div class="itemdesc skill10desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: green;"></i></div>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: green;"></i>
+            </div>
             <div class="itemdesc-upper-text">ポインター(グリーン)
                 <br>
-                <span style="font-size: small;">50,000,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill10kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">50,000,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill10kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -997,13 +1000,14 @@
 
     <div class="itemdesc skill11desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: limegreen;"></i>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: limegreen;"></i>
             </div>
             <div class="itemdesc-upper-text">ポインター(ライムグリーン)
                 <br>
-                <span style="font-size: small;">100,000,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill11kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">100,000,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill11kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -1018,12 +1022,14 @@
 
     <div class="itemdesc skill12desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: green;"></i></div>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: green;"></i>
+            </div>
             <div class="itemdesc-upper-text">ポインター(グリーン)
                 <br>
-                <span style="font-size: small;">500,000,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill12kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">500,000,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill12kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -1038,12 +1044,14 @@
 
     <div class="itemdesc skill13desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: yellow;"></i></div>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: yellow;"></i>
+            </div>
             <div class="itemdesc-upper-text">ポインター(イエロー)
                 <br>
-                <span style="font-size: small;">800,000,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill13kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">800,000,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill13kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -1058,12 +1066,14 @@
 
     <div class="itemdesc skill14desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: orange;"></i></div>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: orange;"></i>
+            </div>
             <div class="itemdesc-upper-text">ポインター(オレンジ)
                 <br>
-                <span style="font-size: small;">1,000,000,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill14kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">1,000,000,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill14kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -1078,12 +1088,14 @@
 
     <div class="itemdesc skill15desc">
         <div class="itemdesc-upper">
-            <div class="itemdesc-picture"><i class="far fa-hand-pointer upgrade-icon" style="color: brown;"></i></div>
+            <div class="itemdesc-picture">
+                <i class="far fa-hand-pointer upgrade-icon" style="color: brown;"></i>
+            </div>
             <div class="itemdesc-upper-text">ポインター(ブラウン)
                 <br>
-                <span style="font-size: small;">3,000,000,000しろくま</span><span
-                    style="font-size: small;">&nbsp;/&nbsp;</span><span style="font-size: small;"
-                    id="skill15kakutokuDesc">未獲得</span>
+                <span style="font-size: small;">3,000,000,000しろくま</span>
+                <span style="font-size: small;">&nbsp;/&nbsp;</span>
+                <span style="font-size: small;" id="skill15kakutokuDesc">未獲得</span>
             </div>
         </div>
         <div class="itemdesc-kaisetu-text">
@@ -1105,6 +1117,8 @@
     <script src="assets/toastr/toastr.js"></script>
 
     <script src="assets/javascript/clicker.js"></script>
+    <script src="assets/javascript/toukei.js"></script>
+
     <script src="assets/javascript/onload.js"></script>
     <script src="assets/javascript/showMenu.js"></script>
 
@@ -1113,8 +1127,6 @@
     <script src="assets/javascript/oldDataUpdate.js"></script>
 
     <script src="assets/javascript/FileSaver.js"></script>
-    <script src="assets/javascript/toukei.js"></script>
-
     <script>
         pageFirstView = Number(localStorage.getItem('pageFirstView'));
         if (pageFirstView == 0) {
@@ -1122,7 +1134,7 @@
             dataImport(localStorage.getItem('saveDataNew'))
             localStorage.setItem('pageFirstView', 1)
             localStorage.setItem('newData', 1)
-            localStorage.setItem("startDate",Math.floor(Date.now() / 1000))
+            localStorage.setItem("startDate", Math.floor(Date.now() / 1000))
         }
         else {
             dataImport(localStorage.getItem('saveDataNew'))
