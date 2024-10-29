@@ -91,6 +91,7 @@ const calcSps = () =>{
 }
 setInterval(() => { // アイテムで増える部分の計算
     fuyasuSirokuma(Sps);
+    refreshToukei()
 }, 1000);
 
 setInterval(() => {

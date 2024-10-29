@@ -19,6 +19,7 @@ const refreshToukei = ()=>{
     toukei_content[0].textContent = sirokumaSuu
     toukei_content[1].textContent = sirokumaSuuRuikei
     toukei_content[2].textContent = sirokumaSuuRuikeiHerasu
+    
 
 
 }
