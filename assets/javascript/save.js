@@ -21,7 +21,7 @@ function dataExport() {
 
     return (exportBASE64)
 }
-let start_date =0
+let startDate =0
 
 function dataImport(ImportData) {
     try {
