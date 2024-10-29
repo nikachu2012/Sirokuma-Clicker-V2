@@ -21,7 +21,7 @@ function dataExport() {
 
     return (exportBASE64)
 }
-let startDate =0
+let startDate = Math.floor(Date.now() / 1000)
 
 function dataImport(ImportData) {
     try {
@@ -42,15 +42,7 @@ function dataImport(ImportData) {
         itemcount = jsonObject.itcnt
         itemRatio = jsonObject.itrat
         shopname = decodeURIComponent(jsonObject.sn);
-        if (jsonObject.cc == undefined) {
-            sirokumaClicks = 0
-            sirokumaSuuByC = 0
-            startDate = Math.floor(Date.now() / 1000)
-        } else {
-            sirokumaClicks = jsonObject.cc
-            sirokumaSuuByC = jsonObject.sbc
-            startDate = jsonObject.startDate
-        }
+        
 
 
 

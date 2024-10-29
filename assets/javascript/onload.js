@@ -10,7 +10,6 @@ let clicker_version = "2.3.0.1";
 
     document.getElementById('clickerw-title-version').innerHTML = '<span class="clickerw-title-version">version ' + clicker_version + '<span>';
     changeShopShoki();
-    refreshToukei();
 
 
 }());
