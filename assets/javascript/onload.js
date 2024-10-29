@@ -1,5 +1,5 @@
 // バージョン指定
-let clicker_version = "2.3.0.0β";
+let clicker_version = "2.3.0.0";
 
 
 (function () {
