@@ -2,7 +2,6 @@
 
 const refreshToukei = ()=>{
     let keika_jikan = []
-    let start_date = localStorage.getItem("startDate")
     let now_Date = Math.floor(Date.now() / 1000)
     keika_jikan[10] = Math.floor(now_Date-start_date)
     keika_jikan[0] = Math.floor(keika_jikan[10] / 31536000)

@@ -12,7 +12,8 @@ function dataExport() {
         "itrat": itemRatio,
         "sn": encodeURIComponent(shopname),
         "cc": sirokumaClicks,
-        "sbc": sirokumaSuuByC
+        "sbc": sirokumaSuuByC,
+        "startDate":startDate
     }
 
     exportBASE64 = window.btoa(JSON.stringify(exportbuffer));
@@ -44,9 +45,11 @@ function dataImport(ImportData) {
         if (jsonObject.cc == undefined) {
             sirokumaClicks = 0
             sirokumaSuuByC = 0
+            startDate = Math.floor(Date.now() / 1000)
         } else {
             sirokumaClicks = jsonObject.cc
             sirokumaSuuByC = jsonObject.sbc
+            startDate = jsonObject.startDate
         }
 
 
