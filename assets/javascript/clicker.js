@@ -1,11 +1,12 @@
 let sirokumaSuu = 0;
 let sirokumaSuuRuikei = 0;
 let sirokumaSuuRuikeiHerasu = 0;
+let sirokumaSuuByC =0
 
 let waribiki = 1;
 
 let sirokumaOneClick = 1;
-
+let sirokumaClicks = 0
 
 function fuyasuSirokuma(sirokumaKazu) {
     sirokumaSuu = sirokumaSuu + sirokumaKazu;
@@ -24,6 +25,8 @@ function herasuSirokuma(HerasuSirokumaKazu) {
 
 function clickSirokuma() {
     fuyasuSirokuma(sirokumaOneClick);
+    sirokumaClicks+=1
+    sirokumaSuuByC += sirokumaOneClick
 }
 
 function updateHyouji() {
@@ -157,7 +160,7 @@ function x100push() {
     item_hyoujiUpdate();
 }
 
-x1push();
+
 
 function itemAllLoad() {
     for (let index = 0; index < 15; index++) {
