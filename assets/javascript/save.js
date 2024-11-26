@@ -42,7 +42,9 @@ function dataImport(ImportData) {
         itemcount = jsonObject.itcnt
         itemRatio = jsonObject.itrat
         shopname = decodeURIComponent(jsonObject.sn);
-        
+        sirokumaClicks = jsonObject.cc
+        sirokumaSuuByC = jsonObject.sbc
+        startDate = jsonObject.startDate
 
 
 
@@ -54,7 +56,7 @@ function dataImport(ImportData) {
 
         updateHyouji();
         itemAllLoad();
-
+        item_hyoujiUpdate()
         x1push();
 
         document.getElementById('shopNameArea').textContent = shopname

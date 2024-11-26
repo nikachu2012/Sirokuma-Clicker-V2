@@ -10,7 +10,7 @@ const refreshToukei = ()=>{
     keika_jikan[2] = Math.floor(keika_jikan[10] / 3600)
     keika_jikan[3] = Math.floor(keika_jikan[10] % 3600 / 60)
     keika_jikan[4] = Math.floor(keika_jikan[10] %3600 % 60 % 60)
-    console.log(keika_jikan)
+ 
 
 
 
