@@ -48,7 +48,7 @@ function dataImport(ImportData) {
 
 
 
-        for (let index = 0; index < 15; index++) {
+        for (let index = 1; index < 16; index++) {
             if (skillKakutoku[index] == 1) {
                 document.getElementById(`skill${index}kakutokuDesc`).innerHTML = "獲得済み";
             }
