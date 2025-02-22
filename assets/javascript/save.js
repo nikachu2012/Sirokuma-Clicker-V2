@@ -44,7 +44,12 @@ function dataImport(ImportData) {
         shopname = decodeURIComponent(jsonObject.sn);
         sirokumaClicks = jsonObject.cc
         sirokumaSuuByC = jsonObject.sbc
-        startDate = jsonObject.startDate
+        if (jsonObject.startDate == void(0)) {
+            startDate = Math.floor(Date.now() / 1000)
+
+        } else {
+            startDate = jsonObject.startDate   
+        }
 
 
 
