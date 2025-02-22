@@ -45,7 +45,8 @@ function dataImport(ImportData) {
         sirokumaClicks = jsonObject.cc
         sirokumaSuuByC = jsonObject.sbc
         if (jsonObject.startDate == void(0)) {
-            startDate == jsonObject.startDate
+            startDate = Math.floor(Date.now() / 1000)
+
         } else {
             startDate = jsonObject.startDate   
         }
